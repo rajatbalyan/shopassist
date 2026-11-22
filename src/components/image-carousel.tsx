@@ -2,18 +2,19 @@ import { Image } from 'expo-image';
 import { useRef, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
 
-import { ZoomableImage } from '@/components/zoomable-image';
+import { ImageViewer } from '@/components/image-viewer';
 import { Radius, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 
 type ImageCarouselProps = { images: string[]; title: string };
 
-/** Paging image carousel with dots and a thumbnail strip. */
+/** Paging image carousel with dots and a thumbnail strip. Tap an image to open the zoomable viewer. */
 export function ImageCarousel({ images, title }: ImageCarouselProps) {
   const { colors } = useTheme();
   const { width } = useWindowDimensions();
   const [index, setIndex] = useState(0);
   const listRef = useRef<FlatList<string>>(null);
+  const [viewerIndex, setViewerIndex] = useState<number | null>(null);
 
   const goTo = (i: number) => {
     setIndex(i);
@@ -32,13 +33,14 @@ export function ImageCarousel({ images, title }: ImageCarouselProps) {
         getItemLayout={(_, i) => ({ length: width, offset: width * i, index: i })}
         onMomentumScrollEnd={(e) => setIndex(Math.round(e.nativeEvent.contentOffset.x / width))}
         renderItem={({ item, index: i }) => (
-          <View style={{ width, height: width * 0.9 }}>
-            <ZoomableImage
-              source={item}
-              style={styles.image}
-              accessibilityLabel={`${title}, image ${i + 1} of ${images.length}`}
-            />
-          </View>
+          <Pressable
+            onPress={() => setViewerIndex(i)}
+            accessibilityRole="imagebutton"
+            accessibilityLabel={`${title}, image ${i + 1} of ${images.length}`}
+            accessibilityHint="Opens full screen with zoom"
+            style={{ width, height: width * 0.9 }}>
+            <Image source={item} style={styles.image} contentFit="contain" transition={200} />
+          </Pressable>
         )}
       />
       {images.length > 1 && (
@@ -74,6 +76,16 @@ export function ImageCarousel({ images, title }: ImageCarouselProps) {
           />
         </>
       )}
+      <ImageViewer
+        images={images}
+        title={title}
+        index={viewerIndex}
+        onIndexChange={(i) => {
+          setViewerIndex(i);
+          goTo(i);
+        }}
+        onClose={() => setViewerIndex(null)}
+      />
     </View>
   );
 }

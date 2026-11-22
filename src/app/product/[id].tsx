@@ -27,6 +27,8 @@ import { useTheme } from '@/hooks/use-theme';
 import { api, ApiError } from '@/lib/api';
 import { formatPrice } from '@/lib/format';
 import * as haptics from '@/lib/haptics';
+import { shareProduct } from '@/lib/links';
+import { ensureNotificationPermission } from '@/lib/notifications';
 import { DELIVERY_FEE, FREE_DELIVERY_THRESHOLD, getPriceBreakdown } from '@/lib/pricing';
 import { useInsights, useProduct, useSimilar } from '@/lib/queries';
 import { useAlertOn, useAlertsStore } from '@/store/alerts';
@@ -50,9 +52,8 @@ export default function ProductScreen() {
       <IconButton
         icon={{ ios: 'square.and.arrow.up', android: 'share' }}
         accessibilityLabel="Share product"
-        onPress={() => {
-          /* Share sheet arrives with deep links (Stretch). */
-        }}
+        disabled={!product}
+        onPress={() => product && void shareProduct(product)}
       />
       <IconButton
         icon={{ ios: 'cart', android: 'shopping_cart' }}
@@ -120,7 +121,11 @@ function ProductDetails({ product }: { product: Product }) {
   const onAlert = (type: AlertType) => {
     const on = toggleAlert(product.id, type);
     haptics.tap();
-    if (on) void api.createAlert(deviceId, product.id, type).catch(() => {});
+    if (on) {
+      void api.createAlert(deviceId, product.id, type).catch(() => {});
+      // Alerts are delivered as notifications, so this is the moment to ask.
+      void ensureNotificationPermission('alert');
+    }
     show(
       type === 'price_drop'
         ? on

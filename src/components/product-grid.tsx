@@ -7,6 +7,7 @@ import { ProductCard } from '@/components/product-card';
 import { ProductCardSkeleton } from '@/components/skeleton';
 import { Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
+import * as haptics from '@/lib/haptics';
 import type { Product } from '@/types';
 
 const SKELETONS = Array.from({ length: 6 }, (_, i) => i);
@@ -71,7 +72,13 @@ export function ProductGrid({
       keyboardShouldPersistTaps="handled"
       refreshControl={
         onRefresh ? (
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.primary} colors={[colors.primary]} />
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={() => {
+              haptics.tap();
+              onRefresh();
+            }}
+            tintColor={colors.primary} colors={[colors.primary]} />
         ) : undefined
       }
       renderItem={({ item }) =>

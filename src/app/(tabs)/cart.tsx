@@ -1,7 +1,17 @@
 import { Image } from 'expo-image';
 import { router } from 'expo-router';
 import { Pressable, StyleSheet, View } from 'react-native';
-import Animated, { FadeIn, FadeOut, LinearTransition } from 'react-native-reanimated';
+import ReanimatedSwipeable from 'react-native-gesture-handler/ReanimatedSwipeable';
+import Animated, {
+  FadeIn,
+  FadeOut,
+  LinearTransition,
+  useAnimatedReaction,
+  useAnimatedStyle,
+  useSharedValue,
+  type SharedValue,
+} from 'react-native-reanimated';
+import { scheduleOnRN } from 'react-native-worklets';
 
 import { BottomBar } from '@/components/bottom-bar';
 import { Button } from '@/components/button';
@@ -27,6 +37,9 @@ import { useCartLines, useCartStore, type CartLine } from '@/store/cart';
 import { useWishlistStore } from '@/store/wishlist';
 
 const MAX_QTY = 10;
+const DELETE_WIDTH = 88;
+/** Dragging past this releases into a delete instead of just revealing the button. */
+const FULL_SWIPE = 200;
 
 export default function CartScreen() {
   const { colors } = useTheme();
@@ -121,7 +134,7 @@ export default function CartScreen() {
             </View>
           }
           renderItem={({ item }) => (
-            <Animated.View entering={FadeIn} exiting={FadeOut}>
+            <Animated.View entering={FadeIn} exiting={FadeOut.duration(180)}>
               <CartRow line={item} onQty={(q) => setQty(item.productId, q)} onRemove={() => onRemove(item)} />
             </Animated.View>
           )}
@@ -153,37 +166,90 @@ function CartRow({ line, onQty, onRemove }: CartRowProps) {
   const { colors } = useTheme();
   const { product, qty } = line;
   const max = Math.max(1, Math.min(product.stock || MAX_QTY, MAX_QTY));
+  // Set on the UI thread while dragging; read on release to tell a full swipe from a reveal.
+  const armed = useSharedValue(false);
 
   return (
-    <View style={[styles.row, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-      <Pressable
-        onPress={() => router.push({ pathname: '/product/[id]', params: { id: product.id } })}
-        accessibilityRole="button"
-        accessibilityLabel={`Open ${product.title}`}
-        style={[styles.thumbWrap, { backgroundColor: colors.surfaceAlt }]}>
-        <Image source={product.thumbnail} style={styles.thumb} contentFit="contain" accessibilityLabel={product.title} />
-      </Pressable>
-      <View style={styles.rowBody}>
-        <View style={styles.rowTop}>
-          <ThemedText numberOfLines={2} style={styles.flex}>
-            {product.title}
+    <ReanimatedSwipeable
+      friction={1.4}
+      rightThreshold={DELETE_WIDTH / 2}
+      overshootRight
+      containerStyle={styles.swipeContainer}
+      renderRightActions={(_progress, translation) => (
+        <DeleteAction translation={translation} armed={armed} title={product.title} onPress={onRemove} />
+      )}
+      onSwipeableWillOpen={() => {
+        if (armed.get()) onRemove();
+      }}>
+      <View style={[styles.row, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+        <Pressable
+          onPress={() => router.push({ pathname: '/product/[id]', params: { id: product.id } })}
+          accessibilityRole="button"
+          accessibilityLabel={`Open ${product.title}`}
+          style={[styles.thumbWrap, { backgroundColor: colors.surfaceAlt }]}>
+          <Image source={product.thumbnail} style={styles.thumb} contentFit="contain" accessibilityLabel={product.title} />
+        </Pressable>
+        <View style={styles.rowBody}>
+          <View style={styles.rowTop}>
+            <ThemedText numberOfLines={2} style={styles.flex}>
+              {product.title}
+            </ThemedText>
+            <IconButton
+              icon={{ ios: 'trash', android: 'delete' }}
+              size={18}
+              color={colors.textSecondary}
+              accessibilityLabel={`Remove ${product.title} from cart`}
+              onPress={onRemove}
+            />
+          </View>
+          <ThemedText variant="caption" color="textSecondary">
+            {formatPrice(product.price)} each
           </ThemedText>
-          <IconButton
-            icon={{ ios: 'trash', android: 'delete' }}
-            size={18}
-            color={colors.textSecondary}
-            accessibilityLabel={`Remove ${product.title} from cart`}
-            onPress={onRemove}
-          />
-        </View>
-        <ThemedText variant="caption" color="textSecondary">
-          {formatPrice(product.price)} each
-        </ThemedText>
-        <View style={styles.rowBottom}>
-          <QuantityStepper value={qty} max={max} onChange={onQty} itemName={product.title} />
-          <ThemedText variant="price">{formatPrice(product.price * qty)}</ThemedText>
+          <View style={styles.rowBottom}>
+            <QuantityStepper value={qty} max={max} onChange={onQty} itemName={product.title} />
+            <ThemedText variant="price">{formatPrice(product.price * qty)}</ThemedText>
+          </View>
         </View>
       </View>
+    </ReanimatedSwipeable>
+  );
+}
+
+type DeleteActionProps = {
+  translation: SharedValue<number>;
+  armed: SharedValue<boolean>;
+  title: string;
+  onPress: () => void;
+};
+
+/** Red action behind a cart row; its background stretches with the drag. */
+function DeleteAction({ translation, armed, title, onPress }: DeleteActionProps) {
+  const { colors } = useTheme();
+
+  useAnimatedReaction(
+    () => translation.get() < -FULL_SWIPE,
+    (isArmed, wasArmed) => {
+      if (isArmed === wasArmed) return;
+      armed.set(isArmed);
+      if (isArmed) scheduleOnRN(haptics.tap);
+    },
+  );
+
+  const fill = useAnimatedStyle(() => ({ width: Math.max(DELETE_WIDTH, -translation.get()) }));
+
+  return (
+    <View style={styles.deleteSlot}>
+      <Animated.View style={[styles.deleteFill, { backgroundColor: colors.danger }, fill]} />
+      <Pressable
+        onPress={onPress}
+        accessibilityRole="button"
+        accessibilityLabel={`Delete ${title}`}
+        style={styles.deleteButton}>
+        <Icon name={{ ios: 'trash.fill', android: 'delete' }} size={22} color="#FFFFFF" />
+        <ThemedText variant="caption" style={styles.deleteText}>
+          Delete
+        </ThemedText>
+      </Pressable>
     </View>
   );
 }
@@ -195,6 +261,11 @@ const styles = StyleSheet.create({
   headerBlock: { gap: Spacing.md },
   deliveryCard: { gap: Spacing.sm, padding: Spacing.md },
   deliveryRow: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
+  swipeContainer: { borderRadius: Radius.lg },
+  deleteSlot: { width: DELETE_WIDTH, marginLeft: Spacing.sm },
+  deleteFill: { position: 'absolute', top: 0, bottom: 0, right: 0, borderRadius: Radius.lg },
+  deleteButton: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: Spacing.xxs },
+  deleteText: { color: '#FFFFFF', fontWeight: '700' },
   row: {
     flexDirection: 'row',
     gap: Spacing.md,

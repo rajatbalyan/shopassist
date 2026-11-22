@@ -40,7 +40,8 @@
         "expo-notifications",
         {
           "icon": "./assets/images/android-icon-monochrome.png",
-          "color": "#5B4CF0"
+          "color": "#5B4CF0",
+          "defaultChannel": "order-updates"
         }
       ]
     ],

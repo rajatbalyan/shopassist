@@ -30,6 +30,10 @@ type SettingsState = {
   recentSearches: string[];
   /** Prefills checkout. */
   lastAddress: Address | null;
+  /** The viewer's "Pinch to zoom" hint has been shown. */
+  zoomHintSeen: boolean;
+  /** The notification explainer was shown after a first add-to-cart (asked once). */
+  notificationPromptSeen: boolean;
 
   setName: (name: string) => void;
   setThemePreference: (pref: ThemePreference) => void;
@@ -41,6 +45,8 @@ type SettingsState = {
   addRecentSearch: (query: string) => void;
   clearRecentSearches: () => void;
   setLastAddress: (address: Address) => void;
+  setZoomHintSeen: () => void;
+  setNotificationPromptSeen: () => void;
 };
 
 export const useSettingsStore = create<SettingsState>()(
@@ -55,6 +61,8 @@ export const useSettingsStore = create<SettingsState>()(
       onboarded: false,
       recentSearches: [],
       lastAddress: null,
+      zoomHintSeen: false,
+      notificationPromptSeen: false,
 
       setName: (name) => set({ name: name.trim() }),
       setThemePreference: (themePreference) => set({ themePreference }),
@@ -77,6 +85,8 @@ export const useSettingsStore = create<SettingsState>()(
       },
       clearRecentSearches: () => set({ recentSearches: [] }),
       setLastAddress: (lastAddress) => set({ lastAddress }),
+      setZoomHintSeen: () => set({ zoomHintSeen: true }),
+      setNotificationPromptSeen: () => set({ notificationPromptSeen: true }),
     }),
     { name: 'settings', storage: persistStorage, version: 1 },
   ),

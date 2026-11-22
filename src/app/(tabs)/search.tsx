@@ -27,7 +27,8 @@ type Filters = Omit<SearchFilters, 'search' | 'sort'>;
 
 export default function SearchScreen() {
   const { colors } = useTheme();
-  const { focus } = useLocalSearchParams<{ focus?: string }>();
+  // `q` comes from deep links: shopassist://search?q=phone
+  const { focus, q } = useLocalSearchParams<{ focus?: string; q?: string }>();
   const inputRef = useRef<ComponentRef<typeof TextInput>>(null);
 
   const [input, setInput] = useState('');
@@ -39,6 +40,15 @@ export default function SearchScreen() {
   const [parsing, setParsing] = useState(false);
   const [explanation, setExplanation] = useState<string | null>(null);
   const [sheet, setSheet] = useState<'filters' | 'sort' | null>(null);
+
+  // Apply a new `q` once (adjusting state during render, not in an effect).
+  const [linkedQuery, setLinkedQuery] = useState<string | undefined>(undefined);
+  if (q !== undefined && q !== linkedQuery) {
+    setLinkedQuery(q);
+    setInput(q);
+    setSubmitted(q.trim());
+    setExplanation(null);
+  }
 
   const debounced = useDebouncedValue(input.trim(), 300);
   // Typing searches after the debounce; pressing Search applies the text immediately.

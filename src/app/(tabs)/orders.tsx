@@ -13,6 +13,7 @@ import { ThemedText } from '@/components/themed-text';
 import { Radius, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 import { formatDate, formatPrice, shortOrderId } from '@/lib/format';
+import * as haptics from '@/lib/haptics';
 import { useOrders } from '@/lib/queries';
 import type { Order } from '@/types';
 
@@ -49,7 +50,15 @@ export default function OrdersScreen() {
         contentContainerStyle={styles.list}
         ListHeaderComponent={title}
         refreshControl={
-          <RefreshControl refreshing={isRefetching} onRefresh={() => void refetch()} tintColor={colors.primary} colors={[colors.primary]} />
+          <RefreshControl
+            refreshing={isRefetching}
+            onRefresh={() => {
+              haptics.tap();
+              void refetch();
+            }}
+            tintColor={colors.primary}
+            colors={[colors.primary]}
+          />
         }
         ListEmptyComponent={
           isError ? (

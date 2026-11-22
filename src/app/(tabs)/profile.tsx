@@ -8,12 +8,15 @@ import { IconButton } from '@/components/icon-button';
 import { ListRow } from '@/components/list-row';
 import { Screen } from '@/components/screen';
 import { SegmentedControl } from '@/components/segmented-control';
+import { useSnackbar } from '@/components/snackbar';
 import { ThemedText } from '@/components/themed-text';
 import { Radius, Spacing, TouchTarget, Typography } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
-import { isMockApi } from '@/lib/api';
+import { isMockApi, mockDropPrice } from '@/lib/api';
 import * as haptics from '@/lib/haptics';
-import { useOrders } from '@/lib/queries';
+import { ensureNotificationPermission, schedulePriceDropDemo } from '@/lib/notifications';
+import { queryClient, queryKeys, useOrders } from '@/lib/queries';
+import { useAlertsStore } from '@/store/alerts';
 import { useSettingsStore, type ThemePreference } from '@/store/settings';
 import { useWishlistStore } from '@/store/wishlist';
 
@@ -36,6 +39,8 @@ export default function ProfileScreen() {
 
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState(name);
+  const [dropping, setDropping] = useState(false);
+  const { show, snackbar } = useSnackbar();
 
   const saveName = () => {
     setName(draft);
@@ -44,6 +49,40 @@ export default function ProfileScreen() {
   };
 
   const initial = name.trim().charAt(0).toUpperCase();
+
+  // Demo: a product with a price alert on (else the first wishlist item) gets 10% cheaper,
+  // and the "price drop" notification the backend will send arrives 5 s later.
+  const simulatePriceDrop = async () => {
+    const alerts = useAlertsStore.getState().subscriptions;
+    const id =
+      Object.keys(alerts).find((pid) => alerts[pid]?.includes('price_drop')) ?? useWishlistStore.getState().ids[0];
+    if (!id) {
+      show('Turn on a price alert or save a product to your wishlist first.');
+      return;
+    }
+    if (!useSettingsStore.getState().notifications.priceAlerts) {
+      show('Price alerts are off in Notification settings.', {
+        actionLabel: 'Settings',
+        onAction: () => router.push('/notifications'),
+      });
+      return;
+    }
+    setDropping(true);
+    try {
+      if (!(await ensureNotificationPermission('settings'))) {
+        show('Notifications are off, so the alert can’t be shown.');
+        return;
+      }
+      const { product, oldPrice } = mockDropPrice(id);
+      await queryClient.invalidateQueries({ queryKey: queryKeys.product(id) });
+      void queryClient.invalidateQueries({ queryKey: ['products'] });
+      await schedulePriceDropDemo(product, oldPrice);
+      haptics.success();
+      show(`${product.title} dropped to a lower price. Notification in 5 seconds.`);
+    } finally {
+      setDropping(false);
+    }
+  };
 
   return (
     <Screen>
@@ -128,7 +167,7 @@ export default function ProfileScreen() {
           </View>
         </Group>
 
-        <Group title="Demo">
+        <Group title="Demo tools">
           <ListRow
             icon={{ ios: 'timer', android: 'timer' }}
             label="Demo mode"
@@ -143,6 +182,14 @@ export default function ProfileScreen() {
               />
             }
           />
+          {isMockApi && (
+            <ListRow
+              icon={{ ios: 'tag', android: 'sell' }}
+              label={dropping ? 'Simulating…' : 'Simulate price drop'}
+              caption="Drops a followed or wishlisted product by 10% and sends a price-alert notification 5 s later."
+              onPress={dropping ? undefined : () => void simulatePriceDrop()}
+            />
+          )}
         </Group>
 
         <Group title="About">
@@ -152,6 +199,7 @@ export default function ProfileScreen() {
           <ListRow label="Data source" value={isMockApi ? 'Local mock' : 'Cloud API'} />
         </Group>
       </ScrollView>
+      {snackbar}
     </Screen>
   );
 }

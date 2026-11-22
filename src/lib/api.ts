@@ -442,6 +442,18 @@ export async function mockSetOrderStatus(id: string, status: OrderStatus): Promi
   return order;
 }
 
+/**
+ * Demo-only: drop a product's price by 10% in the in-memory catalog (resets on reload).
+ * The real backend does this via /admin/products/:id/price-drop.
+ */
+export function mockDropPrice(id: string): { product: Product; oldPrice: number } {
+  const product = findProduct(id);
+  const oldPrice = product.price;
+  // Keep the catalog's INR style: whole rupees ending in 9.
+  product.price = Math.max(9, Math.floor((oldPrice * 0.9) / 10) * 10 - 1);
+  return { product, oldPrice };
+}
+
 const API_URL = process.env.EXPO_PUBLIC_API_URL;
 
 export const isMockApi = !API_URL;

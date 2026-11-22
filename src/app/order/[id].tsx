@@ -21,6 +21,7 @@ import { useTheme } from '@/hooks/use-theme';
 import { ApiError, isMockApi } from '@/lib/api';
 import { formatDate, formatPrice, shortOrderId } from '@/lib/format';
 import * as haptics from '@/lib/haptics';
+import { scheduleOrderStatusDemo } from '@/lib/notifications';
 import { useDemoSetOrderStatus, useOrder } from '@/lib/queries';
 import { useOrdersStore } from '@/store/orders';
 import type { Order, OrderItem, OrderStatus } from '@/types';
@@ -28,7 +29,7 @@ import type { Order, OrderItem, OrderStatus } from '@/types';
 const STEPS: OrderStatus[] = ['placed', 'shipped', 'delivered'];
 
 export default function OrderScreen() {
-  const { id, placed } = useLocalSearchParams<{ id: string; placed?: string }>();
+  const { id, placed, rate } = useLocalSearchParams<{ id: string; placed?: string; rate?: string }>();
   const { data: order, isPending, isError, error, refetch } = useOrder(id);
 
   let body;
@@ -48,7 +49,7 @@ export default function OrderScreen() {
       </View>
     );
   } else {
-    body = <OrderDetails order={order} justPlaced={placed === '1'} />;
+    body = <OrderDetails order={order} justPlaced={placed === '1'} openRating={rate === '1'} />;
   }
 
   return (
@@ -59,13 +60,19 @@ export default function OrderScreen() {
   );
 }
 
-function OrderDetails({ order, justPlaced }: { order: Order; justPlaced: boolean }) {
+type OrderDetailsProps = { order: Order; justPlaced: boolean; /** From the "Rate product" notification action. */ openRating: boolean };
+
+function OrderDetails({ order, justPlaced, openRating }: OrderDetailsProps) {
   const { colors } = useTheme();
   const ratings = useOrdersStore((s) => s.ratings);
   const rate = useOrdersStore((s) => s.rate);
   const demoStatus = useDemoSetOrderStatus();
   const { show, snackbar } = useSnackbar();
-  const [rating, setRating] = useState<{ item: OrderItem; stars: number } | null>(null);
+  const [rating, setRating] = useState<{ item: OrderItem; stars: number } | null>(() => {
+    if (!openRating) return null;
+    const item = order.items.find((i) => !ratings[i.productId]) ?? order.items[0];
+    return item ? { item, stars: 0 } : null;
+  });
 
   const itemCount = order.items.reduce((n, i) => n + i.qty, 0);
   const nextStatus = order.status === 'placed' ? 'shipped' : order.status === 'shipped' ? 'delivered' : null;
@@ -109,7 +116,17 @@ function OrderDetails({ order, justPlaced }: { order: Order; justPlaced: boolean
               title={`Demo: mark as ${STATUS_LABEL[nextStatus].toLowerCase()}`}
               variant="ghost"
               loading={demoStatus.isPending}
-              onPress={() => demoStatus.mutate({ id: order.id, status: nextStatus })}
+              onPress={() =>
+                demoStatus.mutate(
+                  { id: order.id, status: nextStatus },
+                  {
+                    onSuccess: async (updated) => {
+                      const scheduled = await scheduleOrderStatusDemo(updated, nextStatus);
+                      if (scheduled) show('Order update notification in 5 seconds.');
+                    },
+                  },
+                )
+              }
             />
           )}
         </Card>

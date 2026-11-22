@@ -4,11 +4,19 @@ import { StatusBar } from 'expo-status-bar';
 import { useMemo } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
+import { PermissionSheet } from '@/components/permission-sheet';
+import { QuickActionSheet } from '@/components/quick-action-sheet';
 import { useTheme } from '@/hooks/use-theme';
+import { useNotifications } from '@/lib/notifications';
 import { queryClient } from '@/lib/queries';
+
+// Deep links (e.g. shopassist://product/1 from a cold start) open on top of the tabs,
+// so Back always lands somewhere sensible.
+export const unstable_settings = { anchor: '(tabs)' };
 
 export default function RootLayout() {
   const { colors, scheme } = useTheme();
+  useNotifications();
 
   const navigationTheme = useMemo<Theme>(() => {
     const base = scheme === 'dark' ? DarkTheme : DefaultTheme;
@@ -48,7 +56,10 @@ export default function RootLayout() {
             <Stack.Screen name="checkout" options={{ title: 'Checkout' }} />
             <Stack.Screen name="notifications" options={{ title: 'Notifications' }} />
             <Stack.Screen name="onboarding" options={{ headerShown: false, gestureEnabled: false }} />
+            <Stack.Screen name="+not-found" options={{ title: 'Not found' }} />
           </Stack>
+          <QuickActionSheet />
+          <PermissionSheet />
         </ThemeProvider>
       </QueryClientProvider>
     </GestureHandlerRootView>
