@@ -282,3 +282,31 @@ describe('admin', () => {
     expect(product.price).toBe(body.price);
   });
 });
+
+describe('push diagnostics', () => {
+  it('reports registration without exposing the token', async () => {
+    const { app, json } = setup();
+    expect(await (await app.request('/devices/dev-x')).json()).toEqual({ registered: false });
+    await json('/devices', { deviceId: 'dev-x', pushToken: 'ExponentPushToken[abcdef123456]' });
+    const body = (await (await app.request('/devices/dev-x')).json()) as Record<string, unknown>;
+    expect(body).toMatchObject({ registered: true, tokenSuffix: '123456' });
+    expect(JSON.stringify(body)).not.toContain('ExponentPushToken');
+  });
+
+  it('sends a test push with action buttons to that device only, 3 per minute', async () => {
+    const { app, json, sent } = setup();
+    expect((await app.request('/devices/nobody/test-push', { method: 'POST' })).status).toBe(404);
+
+    await json('/devices', { deviceId: 'dev-t', pushToken: 'ExponentPushToken[t]' });
+    const res = await app.request('/devices/dev-t/test-push', { method: 'POST' });
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ pushed: 1 });
+    expect(sent[0]?.tokens).toEqual(['ExponentPushToken[t]']);
+    expect(sent[0]?.payload).toMatchObject({ categoryId: 'price_alert', channelId: 'order-updates' });
+    expect((sent[0]?.payload.data as { url: string }).url).toMatch(/^shopassist:\/\/product\//);
+
+    expect((await app.request('/devices/dev-t/test-push', { method: 'POST' })).status).toBe(200);
+    expect((await app.request('/devices/dev-t/test-push', { method: 'POST' })).status).toBe(200);
+    expect((await app.request('/devices/dev-t/test-push', { method: 'POST' })).status).toBe(429);
+  });
+});

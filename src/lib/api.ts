@@ -11,6 +11,7 @@ import type {
   Category,
   ChatMessage,
   CreateOrderInput,
+  DeviceStatus,
   Insight,
   Order,
   OrderStatus,
@@ -20,6 +21,7 @@ import type {
   ProductQuery,
   Review,
   SearchFilters,
+  TestPushResult,
 } from '@/types';
 
 export interface Api {
@@ -31,6 +33,9 @@ export interface Api {
   parseSearch(query: string): Promise<ParsedSearch>;
   ask(productId: string, question: string, history: ChatMessage[]): Promise<AskResponse>;
   registerDevice(deviceId: string, pushToken: string): Promise<void>;
+  getDevice(deviceId: string): Promise<DeviceStatus>;
+  /** Real Expo push to this device (POST /devices/:id/test-push, 3/min). */
+  sendTestPush(deviceId: string): Promise<TestPushResult>;
   createAlert(deviceId: string, productId: string, type: AlertType): Promise<void>;
   deleteAlert(deviceId: string, productId: string, type: AlertType): Promise<void>;
   createOrder(input: CreateOrderInput): Promise<Order>;
@@ -133,6 +138,8 @@ function createHttpApi(baseUrl: string): Api {
       request('/ask', { method: 'POST', body: { productId, question, history } }),
     registerDevice: (deviceId, pushToken) =>
       request('/devices', { method: 'POST', body: { deviceId, pushToken } }),
+    getDevice: (deviceId) => request(`/devices/${encodeURIComponent(deviceId)}`),
+    sendTestPush: (deviceId) => request(`/devices/${encodeURIComponent(deviceId)}/test-push`, { method: 'POST' }),
     createAlert: (deviceId, productId, type) =>
       request('/alerts', { method: 'POST', body: { deviceId, productId, type } }),
     deleteAlert: (deviceId, productId, type) =>
@@ -442,6 +449,13 @@ export const mockApi: Api = {
   async registerDevice() {
     await delay();
   },
+  async getDevice() {
+    await delay();
+    return { registered: false };
+  },
+  async sendTestPush() {
+    throw new ApiError('Push needs the Cloud API (the app is in mock mode)', 0);
+  },
   async createAlert() {
     await delay();
   },
@@ -509,3 +523,6 @@ const API_URL = process.env.EXPO_PUBLIC_API_URL;
 
 export const isMockApi = !API_URL;
 export const api: Api = API_URL ? createHttpApi(API_URL) : mockApi;
+
+/** Host of the Cloud API for display (Profile → About), or null in mock mode. */
+export const apiHost = API_URL ? (API_URL.match(/^[a-z]+:\/\/([^/?#]+)/i)?.[1] ?? API_URL) : null;

@@ -117,3 +117,8 @@ export type CreateOrderInput = {
   items: OrderItem[];
   address: Address;
 };
+
+/** GET /devices/:deviceId (push diagnostics). The server returns only the token's last 6 characters. */
+export type DeviceStatus = { registered: boolean; tokenSuffix?: string; updatedAt?: string };
+
+export type TestPushResult = { pushed: number; note?: string };

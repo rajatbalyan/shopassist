@@ -42,3 +42,9 @@ example
 # generated native folders
 /ios
 /android
+
+# Firebase / FCM service-account keys (uploaded to EAS, never committed).
+# google-services.json is NOT a secret and is committed.
+*-firebase-adminsdk-*.json
+fcm-service-account*.json
+*service-account*.json

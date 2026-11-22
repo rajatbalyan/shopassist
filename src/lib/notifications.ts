@@ -241,56 +241,61 @@ export function schedulePriceDropDemo(product: Product, oldPrice: number) {
 }
 
 // ---------------------------------------------------------------------------
-// Push (Prompts 4–5; not called on launch yet)
+// Push
 // ---------------------------------------------------------------------------
 
-/** Expo push token in a development/preview build with a projectId; `null` otherwise. */
-export async function getPushToken(): Promise<string | null> {
-  if (!supported) return null;
-  if (isExpoGo) {
-    console.warn('[notifications] Push tokens need a development build (Expo Go has no remote push). Returning null.');
-    return null;
-  }
-  if (!Device.isDevice) {
-    console.warn('[notifications] Push tokens need a physical device. Returning null.');
-    return null;
-  }
+export type PushTokenResult = { token: string | null; reason?: string };
+
+/** Expo push token plus, when there's none, a short reason (shown in Push diagnostics). */
+export async function getPushTokenResult(): Promise<PushTokenResult> {
+  if (!supported) return { token: null, reason: 'Not supported on web' };
+  if (isExpoGo) return { token: null, reason: 'Expo Go has no remote push; use the dev or preview build' };
+  if (!Device.isDevice) return { token: null, reason: 'Needs a physical device' };
   const projectId: string | undefined = Constants.expoConfig?.extra?.eas?.projectId ?? Constants.easConfig?.projectId;
-  if (!projectId) {
-    console.warn('[notifications] No EAS projectId in app config. Returning null.');
-    return null;
-  }
-  if (!(await hasPermission())) {
-    console.warn('[notifications] Notification permission not granted. Returning null.');
-    return null;
-  }
+  if (!projectId) return { token: null, reason: 'No EAS projectId in app config' };
+  if (!(await hasPermission())) return { token: null, reason: 'Notifications not allowed' };
   try {
     // Android needs a channel before a token can be fetched.
     await setupNotifications();
     const { data } = await Notifications.getExpoPushTokenAsync({ projectId });
-    return data;
+    return { token: data };
   } catch (e) {
-    console.warn('[notifications] Could not get a push token', e);
-    return null;
+    // Most often: FCM not configured (google-services.json / FCM key missing) or no network.
+    return { token: null, reason: e instanceof Error ? e.message : String(e) };
   }
 }
+
+/** Expo push token in a development/preview build with a projectId; `null` otherwise. */
+export async function getPushToken(): Promise<string | null> {
+  const { token, reason } = await getPushTokenResult();
+  if (!token) console.warn(`[notifications] No push token: ${reason}`);
+  return token;
+}
+
+/** Same rule as the backend: the last 6 characters inside ExponentPushToken[…]. */
+export const pushTokenSuffix = (token: string) => token.replace(/]$/, '').slice(-6);
+
+/** "ExponentPushToken[…a1b2c3]": recognisable on screen without revealing the token. */
+export const maskPushToken = (token: string) => `${token.split('[')[0]}[…${pushTokenSuffix(token)}]`;
 
 /**
  * Registers this device's push token with the backend (POST /devices), only when it changed.
  * Development/preview builds with the real API only; a no-op in Expo Go and mock mode.
  */
-export async function syncPushToken(force = false) {
-  if (!supported || isExpoGo || isMockApi || !(await hasPermission())) return;
+export async function syncPushToken(force = false): Promise<boolean> {
+  if (!supported || isExpoGo || isMockApi || !(await hasPermission())) return false;
   await waitForHydration(useSettingsStore);
   const token = await getPushToken();
-  if (!token) return;
+  if (!token) return false;
   const settings = useSettingsStore.getState();
-  if (!force && token === settings.registeredPushToken) return;
+  if (!force && token === settings.registeredPushToken) return true;
   try {
     await api.registerDevice(settings.deviceId, token);
     settings.setRegisteredPushToken(token);
+    return true;
   } catch (e) {
     console.warn('[notifications] Could not register the push token', e);
+    return false;
   }
 }
 
@@ -299,6 +304,19 @@ export async function syncPushToken(force = false) {
 // ---------------------------------------------------------------------------
 
 const handledResponses = new Set<string>();
+
+/**
+ * Navigates, retrying shortly if the navigator isn't mounted yet (a cold start from a
+ * notification can fire before the root Stack is ready). Never throws into the caller.
+ */
+function go(navigate: () => void, attempt = 0) {
+  try {
+    navigate();
+  } catch (e) {
+    if (attempt < 5) setTimeout(() => go(navigate, attempt + 1), 200);
+    else console.warn('[notifications] Could not open the notification target', e);
+  }
+}
 
 async function handleResponse(response: Notifications.NotificationResponse) {
   const { notification, actionIdentifier } = response;
@@ -312,27 +330,30 @@ async function handleResponse(response: Notifications.NotificationResponse) {
 
   switch (actionIdentifier) {
     case ACTIONS.track:
-      if (orderId) router.push({ pathname: '/order/[id]', params: { id: orderId } });
+      if (orderId) go(() => router.push({ pathname: '/order/[id]', params: { id: orderId } }));
       return;
     case ACTIONS.rate:
-      if (orderId) router.push({ pathname: '/order/[id]', params: { id: orderId, rate: '1' } });
+      if (orderId) go(() => router.push({ pathname: '/order/[id]', params: { id: orderId, rate: '1' } }));
       return;
     case ACTIONS.addToCart: {
       if (!data.productId) break;
       try {
         const id = data.productId;
         const product = await queryClient.fetchQuery({ queryKey: queryKeys.product(id), queryFn: () => api.getProduct(id), staleTime: 0 });
+        await waitForHydration(useCartStore);
         useCartStore.getState().add(product);
         haptics.success();
-        router.navigate('/cart');
+        go(() => router.navigate('/cart'));
       } catch {
-        if (data.url) router.push(linkToHref(data.url));
+        const url = data.url;
+        if (url) go(() => router.push(linkToHref(url)));
       }
       return;
     }
   }
   // Default tap and "View": follow the deep link.
-  if (data.url) router.push(linkToHref(data.url));
+  const url = data.url;
+  if (url) go(() => router.push(linkToHref(url)));
 }
 
 /**
