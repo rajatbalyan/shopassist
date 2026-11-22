@@ -70,6 +70,7 @@ export function PushDiagnostics({ onMessage }: { onMessage: (text: string) => vo
   const { colors } = useTheme();
   const [data, setData] = useState<Diagnostics | null>(null);
   const [busy, setBusy] = useState<'test' | 'register' | null>(null);
+  const deviceId = useSettingsStore((s) => s.deviceId);
 
   const refresh = useCallback(() => {
     let cancelled = false;
@@ -151,6 +152,10 @@ export function PushDiagnostics({ onMessage }: { onMessage: (text: string) => vo
           </View>
         ))
       )}
+      {/* Long-press to copy: lets the PowerShell test-push command in DEPLOY.md target this phone. */}
+      <ThemedText variant="caption" color="textSecondary" selectable>
+        Device id: {deviceId}
+      </ThemedText>
       <View style={styles.actions}>
         <Button
           title={isMockApi ? 'Send local test' : 'Send me a test push'}

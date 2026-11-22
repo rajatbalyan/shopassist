@@ -7,8 +7,8 @@ Build method: the **Dockerfile** in `backend/`. `gcloud run deploy --source back
 ## 0. Variables (paste once per PowerShell session)
 
 ```powershell
-$PROJECT_ID = "your-project-id"      # e.g. rajat-workspace-509709
-$REGION     = "asia-south1"          # Cloud Run + Firestore (Mumbai)
+$PROJECT_ID = "rajat-experiments"
+$REGION     = "asia-south2"          # Cloud Run + Firestore (Delhi)
 $AI_REGION  = "global"               # Vertex AI location for Gemini (see step 3b)
 $MODEL      = "gemini-3.5-flash-lite" # also the default in backend/src/config.ts (3.8 Flash is blocked for new projects)
 $DATABASE   = "shopassist"           # named Firestore database (not "(default)")
@@ -35,7 +35,7 @@ Billing must be enabled on the project.
 gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com firestore.googleapis.com aiplatform.googleapis.com secretmanager.googleapis.com
 ```
 
-## 3. Firestore (Native mode) in asia-south1
+## 3. Firestore (Native mode) in $REGION
 
 The API uses a **named** database, `shopassist` (set by `FIRESTORE_DATABASE_ID`). Skip this if it already exists
 (`gcloud firestore databases list`).
@@ -68,11 +68,11 @@ available to this project. Change `$MODEL` and the `GEMINI_MODEL` default togeth
 ```powershell
 $ADMIN_KEY = -join ((48..57) + (97..122) | Get-Random -Count 32 | ForEach-Object { [char]$_ })
 [IO.File]::WriteAllText("$env:TEMP\admin-key.txt", $ADMIN_KEY)   # no trailing newline
-gcloud secrets create admin-key --replication-policy=automatic --data-file="$env:TEMP\admin-key.txt"
+gcloud secrets create ADMIN_KEY --replication-policy=automatic --data-file="$env:TEMP\admin-key.txt"
 Remove-Item "$env:TEMP\admin-key.txt"
 ```
 
-Read it back any time with `gcloud secrets versions access latest --secret admin-key`.
+Read it back any time with `gcloud secrets versions access latest --secret ADMIN_KEY`.
 
 ## 5. Dedicated service account (least privilege)
 
@@ -81,7 +81,7 @@ gcloud iam service-accounts create $SA_NAME --display-name "ShopAssist API"
 gcloud projects add-iam-policy-binding $PROJECT_ID --member "serviceAccount:$SA" --role roles/aiplatform.user --condition=None
 gcloud projects add-iam-policy-binding $PROJECT_ID --member "serviceAccount:$SA" --role roles/datastore.user --condition=None
 # Secret access only on this one secret (narrower than a project-wide grant):
-gcloud secrets add-iam-policy-binding admin-key --member "serviceAccount:$SA" --role roles/secretmanager.secretAccessor
+gcloud secrets add-iam-policy-binding ADMIN_KEY --member "serviceAccount:$SA" --role roles/secretmanager.secretAccessor
 ```
 
 ## 6. Deploy
@@ -93,7 +93,7 @@ gcloud run deploy $SERVICE `
   --region $REGION `
   --service-account $SA `
   --set-env-vars "GCP_PROJECT_ID=$PROJECT_ID,GCP_LOCATION=$AI_REGION,GEMINI_MODEL=$MODEL,STORE=firestore,FIRESTORE_DATABASE_ID=$DATABASE" `
-  --set-secrets "ADMIN_KEY=admin-key:latest" `
+  --set-secrets "ADMIN_KEY=ADMIN_KEY:latest" `
   --allow-unauthenticated `
   --min-instances 0 `
   --max-instances 3
@@ -124,7 +124,7 @@ Restart Metro after changing `.env` (`npm run start:dev`). For EAS builds, add t
 "preview": {
   "distribution": "internal",
   "android": { "buildType": "apk" },
-  "env": { "EXPO_PUBLIC_API_URL": "https://shopassist-api-XXXX.asia-south1.run.app" }
+  "env": { "EXPO_PUBLIC_API_URL": "https://shopassist-api-wzpqdigtdq-em.a.run.app" }
 }
 ```
 
@@ -145,7 +145,7 @@ pushes log `push.sent`, `push.error` and `push.receipt`. Filter in Logs Explorer
 
 ```powershell
 $API       = gcloud run services describe $SERVICE --region $REGION --format "value(status.url)"
-$ADMIN_KEY = gcloud secrets versions access latest --secret admin-key
+$ADMIN_KEY = gcloud secrets versions access latest --secret ADMIN_KEY
 $H         = @{ "x-admin-key" = $ADMIN_KEY }
 
 # Newest orders (to copy the full order id; the app shows only the last 6 characters)
@@ -188,3 +188,16 @@ npm run typecheck
   fallbacks unless ADC and `GCP_PROJECT_ID` are set.
 - To use the local API from a phone: `EXPO_PUBLIC_API_URL=http://<your-PC-LAN-IP>:8080` in the
   app's `.env` (same Wi-Fi; allow Node through Windows Firewall).
+
+## 10. Test push to one device (no admin key)
+
+The app's **Profile → Demo tools → Push diagnostics → Send me a test push** calls this. From a PC,
+copy the device id from the bottom of Push diagnostics (long-press to select):
+
+```powershell
+$DEVICE_ID = "<device id>"
+Invoke-RestMethod "$API/devices/$DEVICE_ID"                       # { registered, tokenSuffix }
+Invoke-RestMethod -Method Post -Uri "$API/devices/$DEVICE_ID/test-push"   # 3 per minute per device
+```
+
+`404` means the device never registered a push token (open the app's Push diagnostics → Register again).

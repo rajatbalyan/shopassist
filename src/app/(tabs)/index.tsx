@@ -13,6 +13,7 @@ import { SectionHeader } from '@/components/section-header';
 import { Skeleton } from '@/components/skeleton';
 import { ThemedText } from '@/components/themed-text';
 import { Radius, Spacing, TouchTarget } from '@/constants/theme';
+import { PROMO } from '@/constants/promo';
 import { useTheme } from '@/hooks/use-theme';
 import { useCategories, useProductGrid, useProducts } from '@/lib/queries';
 import { useSettingsStore } from '@/store/settings';
@@ -87,7 +88,7 @@ export default function HomeScreen() {
             style={({ pressed }) => [styles.banner, { backgroundColor: colors.primary }, pressed && { opacity: 0.9 }]}>
             <View style={styles.bannerText}>
               <ThemedText variant="caption" style={[styles.bannerEyebrow, { color: colors.primaryText }]}>
-                FEATURED DEAL
+                {PROMO.eyebrow}
               </ThemedText>
               <ThemedText variant="heading" style={{ color: colors.primaryText }}>
                 Up to {featured.maxDiscount}% off on {featured.name}
