@@ -34,19 +34,23 @@ export default function RootLayout() {
     };
   }, [colors, scheme]);
 
+  const screenOptions = useMemo(
+    () => ({
+      headerBackButtonDisplayMode: 'minimal' as const,
+      headerTintColor: colors.primary,
+      headerTitleStyle: { color: colors.text },
+      headerStyle: { backgroundColor: colors.surface },
+      contentStyle: { backgroundColor: colors.background },
+    }),
+    [colors],
+  );
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider value={navigationTheme}>
           <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
-          <Stack
-            screenOptions={{
-              headerBackButtonDisplayMode: 'minimal',
-              headerTintColor: colors.primary,
-              headerTitleStyle: { color: colors.text },
-              headerStyle: { backgroundColor: colors.surface },
-              contentStyle: { backgroundColor: colors.background },
-            }}>
+          <Stack screenOptions={screenOptions}>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="product/[id]" options={{ title: '' }} />
             <Stack.Screen name="product/[id]/ask" options={{ presentation: 'modal', headerShown: false }} />

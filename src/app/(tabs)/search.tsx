@@ -28,7 +28,10 @@ type Filters = Omit<SearchFilters, 'search' | 'sort'>;
 export default function SearchScreen() {
   const { colors } = useTheme();
   // `q` comes from deep links: shopassist://search?q=phone
-  const { focus, q } = useLocalSearchParams<{ focus?: string; q?: string }>();
+  const params = useLocalSearchParams<{ focus?: string; q?: string | string[] }>();
+  const { focus } = params;
+  // Normalised to a primitive so the comparison below can't see a new array every render.
+  const q = Array.isArray(params.q) ? params.q[0] : params.q;
   const inputRef = useRef<ComponentRef<typeof TextInput>>(null);
 
   const [input, setInput] = useState('');
