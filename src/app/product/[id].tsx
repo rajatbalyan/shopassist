@@ -125,6 +125,8 @@ function ProductDetails({ product }: { product: Product }) {
       void api.createAlert(deviceId, product.id, type).catch(() => {});
       // Alerts are delivered as notifications, so this is the moment to ask.
       void ensureNotificationPermission('alert');
+    } else {
+      void api.deleteAlert(deviceId, product.id, type).catch(() => {});
     }
     show(
       type === 'price_drop'

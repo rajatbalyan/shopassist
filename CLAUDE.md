@@ -9,3 +9,4 @@
 - No secrets in app code. Only EXPO_PUBLIC_* env vars in the app.
 - Before finishing any task: `npx tsc --noEmit` and `npx expo lint` must pass.
 - Commit at the end of each prompt with a conventional-commit message. Never push.
+- backend/ is a separate Node project (Hono API for Cloud Run): use `npm install` inside backend/, run `npm run typecheck` and `npm test` there. Deploy steps: backend/DEPLOY.md.

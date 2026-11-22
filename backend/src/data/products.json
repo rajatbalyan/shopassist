@@ -1,0 +1,4576 @@
+[
+  {
+    "id": "121",
+    "title": "iPhone 5s",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+    "price": 16999,
+    "mrp": 19599,
+    "rating": 4,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp",
+    "specs": {
+      "Brand": "Apple",
+      "SKU": "SMA-APP-IPH-121",
+      "Shipping weight": "2 kg",
+      "Dimensions": "5.29 × 18.38 × 17.72 cm",
+      "Warranty": "Lifetime warranty",
+      "Shipping": "Ships in 1 month",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 25,
+    "tags": [
+      "smartphones",
+      "apple"
+    ],
+    "reviews": [
+      {
+        "id": "121-g1",
+        "rating": 3,
+        "comment": "Disappointed. Gets warm and heats up during long video calls.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-09-30T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "121-g3",
+        "rating": 5,
+        "comment": "Exceeded my expectations. The display is bright and sharp, even outdoors. Camera takes crisp photos in daylight.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-08-29T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "121-g2",
+        "rating": 4,
+        "comment": "Okay for the price. Performance is smooth, no lag while multitasking. But battery drains fast when gaming.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-04-10T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "121-g4",
+        "rating": 5,
+        "comment": "Really happy with this. Delivery was quick and the packaging was secure. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-01-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "121-r1",
+        "rating": 5,
+        "comment": "Highly recommended!",
+        "reviewerName": "Jace Smith",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "121-r2",
+        "rating": 1,
+        "comment": "Not as described!",
+        "reviewerName": "Logan Torres",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "121-r3",
+        "rating": 5,
+        "comment": "Very satisfied!",
+        "reviewerName": "Harper Kelly",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "122",
+    "title": "iPhone 6",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.",
+    "price": 25499,
+    "mrp": 27399,
+    "rating": 3.6,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp",
+    "specs": {
+      "Brand": "Apple",
+      "SKU": "SMA-APP-IPH-122",
+      "Shipping weight": "7 kg",
+      "Dimensions": "11 × 9.1 × 9.67 cm",
+      "Warranty": "1 month warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 60,
+    "tags": [
+      "smartphones",
+      "apple"
+    ],
+    "reviews": [
+      {
+        "id": "122-g2",
+        "rating": 4,
+        "comment": "Solid purchase. Camera takes crisp photos in daylight. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Neha Joshi",
+        "date": "2026-10-31T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "122-g1",
+        "rating": 2,
+        "comment": "Disappointed. Charger is slow, takes ages to fully charge. Gets warm and heats up during long video calls.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-09-14T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "122-g5",
+        "rating": 3,
+        "comment": "Decent overall. Delivery was quick and the packaging was secure. But bit overpriced for what you get.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-09-14T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "122-g6",
+        "rating": 4,
+        "comment": "Solid purchase. Delivery was quick and the packaging was secure. Build quality feels premium in the hand.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-03-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "122-g4",
+        "rating": 5,
+        "comment": "Solid purchase. Speakers are loud and the sound is clear. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Siddharth Rao",
+        "date": "2026-02-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "122-g3",
+        "rating": 2,
+        "comment": "Not great. Charger is slow, takes ages to fully charge. Bit overpriced for what you get.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-02-22T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "122-r1",
+        "rating": 3,
+        "comment": "Disappointing product!",
+        "reviewerName": "Stella Morris",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "122-r2",
+        "rating": 4,
+        "comment": "Excellent quality!",
+        "reviewerName": "Nolan Gonzalez",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "122-r3",
+        "rating": 5,
+        "comment": "Great value for money!",
+        "reviewerName": "Benjamin Foster",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ],
+    "sponsored": true
+  },
+  {
+    "id": "123",
+    "title": "iPhone 13 Pro",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.",
+    "price": 93499,
+    "mrp": 103199,
+    "rating": 4.1,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp",
+    "specs": {
+      "Brand": "Apple",
+      "SKU": "SMA-APP-IPH-123",
+      "Shipping weight": "8 kg",
+      "Dimensions": "12.63 × 5.28 × 14.29 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 2 weeks",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 56,
+    "tags": [
+      "smartphones",
+      "apple"
+    ],
+    "reviews": [
+      {
+        "id": "123-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Battery easily lasts a full day of heavy use. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-08-28T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "123-g1",
+        "rating": 3,
+        "comment": "Bit overpriced for what you get. Battery drains fast when gaming.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-08-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "123-g3",
+        "rating": 4,
+        "comment": "Really happy with this. Battery easily lasts a full day of heavy use. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-08-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "123-g4",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Performance is smooth, no lag while multitasking. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-04-14T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "123-r1",
+        "rating": 5,
+        "comment": "Would buy again!",
+        "reviewerName": "Christian Perez",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "123-r2",
+        "rating": 3,
+        "comment": "Not worth the price!",
+        "reviewerName": "Liam Gonzalez",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "123-r3",
+        "rating": 5,
+        "comment": "Very satisfied!",
+        "reviewerName": "Tristan Scott",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "124",
+    "title": "iPhone X",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.",
+    "price": 76499,
+    "mrp": 95199,
+    "rating": 3.4,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/thumbnail.webp",
+    "specs": {
+      "Brand": "Apple",
+      "SKU": "SMA-APP-IPH-124",
+      "Shipping weight": "1 kg",
+      "Dimensions": "21.88 × 24.19 × 14.19 cm",
+      "Warranty": "3 months warranty",
+      "Shipping": "Ships in 3-5 business days",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 37,
+    "tags": [
+      "smartphones",
+      "apple"
+    ],
+    "reviews": [
+      {
+        "id": "124-g1",
+        "rating": 2,
+        "comment": "Not great. Camera struggles in low light, photos look grainy. Battery drains fast when gaming.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-11-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "124-g3",
+        "rating": 4,
+        "comment": "Okay for the price. Delivery was quick and the packaging was secure. But gets warm and heats up during long video calls.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-10-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "124-g4",
+        "rating": 4,
+        "comment": "Solid purchase. Battery easily lasts a full day of heavy use. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-09-09T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "124-g2",
+        "rating": 3,
+        "comment": "Disappointed. Camera struggles in low light, photos look grainy.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-02-21T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "124-r1",
+        "rating": 4,
+        "comment": "Highly recommended!",
+        "reviewerName": "Tyler Davis",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "124-r2",
+        "rating": 5,
+        "comment": "Great product!",
+        "reviewerName": "Aria Parker",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "124-r3",
+        "rating": 2,
+        "comment": "Not as described!",
+        "reviewerName": "Lily Torres",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "125",
+    "title": "Oppo A57",
+    "brand": "Oppo",
+    "category": "smartphones",
+    "description": "The Oppo A57 is a mid-range smartphone known for its sleek design and capable features. It offers a balance of performance and affordability, making it a popular choice.",
+    "price": 21299,
+    "mrp": 21899,
+    "rating": 3.6,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/thumbnail.webp",
+    "specs": {
+      "Brand": "Oppo",
+      "SKU": "SMA-OPP-OPP-125",
+      "Shipping weight": "5 kg",
+      "Dimensions": "7.2 × 10.74 × 23.68 cm",
+      "Warranty": "Lifetime warranty",
+      "Shipping": "Ships in 3-5 business days",
+      "Return policy": "90 days return policy"
+    },
+    "stock": 19,
+    "tags": [
+      "smartphones",
+      "oppo"
+    ],
+    "reviews": [
+      {
+        "id": "125-g2",
+        "rating": 5,
+        "comment": "The display is bright and sharp, even outdoors. Camera takes crisp photos in daylight.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-07-17T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "125-g4",
+        "rating": 4,
+        "comment": "Loving it so far. Performance is smooth, no lag while multitasking. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-05-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "125-g1",
+        "rating": 3,
+        "comment": "Expected better. Speaker sound is tinny at high volume.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-04-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "125-g3",
+        "rating": 2,
+        "comment": "Charger is slow, takes ages to fully charge. Gets warm and heats up during long video calls.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-01-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "125-r1",
+        "rating": 4,
+        "comment": "Excellent quality!",
+        "reviewerName": "Scarlett Wright",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "125-r2",
+        "rating": 5,
+        "comment": "Excellent quality!",
+        "reviewerName": "Jacob Cooper",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "125-r3",
+        "rating": 2,
+        "comment": "Poor quality!",
+        "reviewerName": "Zoe Nicholson",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "126",
+    "title": "Oppo F19 Pro Plus",
+    "brand": "Oppo",
+    "category": "smartphones",
+    "description": "The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
+    "price": 33999,
+    "mrp": 41799,
+    "rating": 4.4,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/thumbnail.webp",
+    "specs": {
+      "Brand": "Oppo",
+      "SKU": "SMA-OPP-OPP-126",
+      "Shipping weight": "6 kg",
+      "Dimensions": "6.78 × 25.17 × 8.4 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 1 week",
+      "Return policy": "90 days return policy"
+    },
+    "stock": 78,
+    "tags": [
+      "smartphones",
+      "oppo"
+    ],
+    "reviews": [
+      {
+        "id": "126-g5",
+        "rating": 5,
+        "comment": "Solid purchase. Delivery was quick and the packaging was secure. Performance is smooth, no lag while multitasking.",
+        "reviewerName": "Arjun Mehta",
+        "date": "2026-10-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "126-g1",
+        "rating": 3,
+        "comment": "Not great. Camera struggles in low light, photos look grainy.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-10-09T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "126-g6",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Delivery was quick and the packaging was secure. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-07-21T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "126-g2",
+        "rating": 5,
+        "comment": "Really happy with this. Build quality feels premium in the hand. Speakers are loud and the sound is clear.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-06-22T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "126-g3",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Performance is smooth, no lag while multitasking. Build quality feels premium in the hand.",
+        "reviewerName": "Siddharth Rao",
+        "date": "2026-05-17T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "126-g4",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Delivery was quick and the packaging was secure. Speakers are loud and the sound is clear.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-02-10T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "126-r1",
+        "rating": 5,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Emily Johnson",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "126-r2",
+        "rating": 5,
+        "comment": "Highly recommended!",
+        "reviewerName": "Jaxon Barnes",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "126-r3",
+        "rating": 4,
+        "comment": "Would buy again!",
+        "reviewerName": "Nova Cooper",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "127",
+    "title": "Oppo K1",
+    "brand": "Oppo",
+    "category": "smartphones",
+    "description": "The Oppo K1 series offers a range of smartphones with various features and specifications. Known for their stylish design and reliable performance, the Oppo K1 series caters to diverse user preferences.",
+    "price": 25499,
+    "mrp": 31299,
+    "rating": 3.1,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/3.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/4.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/thumbnail.webp",
+    "specs": {
+      "Brand": "Oppo",
+      "SKU": "SMA-OPP-OPP-127",
+      "Shipping weight": "5 kg",
+      "Dimensions": "13.89 × 10.63 × 16.6 cm",
+      "Warranty": "1 month warranty",
+      "Shipping": "Ships in 1-2 business days",
+      "Return policy": "30 days return policy"
+    },
+    "stock": 55,
+    "tags": [
+      "smartphones",
+      "oppo"
+    ],
+    "reviews": [
+      {
+        "id": "127-g3",
+        "rating": 3,
+        "comment": "Not great. Battery drains fast when gaming.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-11-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "127-g2",
+        "rating": 4,
+        "comment": "Camera takes crisp photos in daylight. Performance is smooth, no lag while multitasking.",
+        "reviewerName": "Neha Joshi",
+        "date": "2026-10-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "127-g1",
+        "rating": 1,
+        "comment": "Expected better. Camera struggles in low light, photos look grainy. Battery drains fast when gaming.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-06-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "127-g4",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Performance is smooth, no lag while multitasking. Camera takes crisp photos in daylight.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-01-30T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "127-r1",
+        "rating": 4,
+        "comment": "Very pleased!",
+        "reviewerName": "Christopher West",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "127-r2",
+        "rating": 4,
+        "comment": "Highly recommended!",
+        "reviewerName": "Mia Miller",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "127-r3",
+        "rating": 2,
+        "comment": "Very dissatisfied!",
+        "reviewerName": "Ella Adams",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "128",
+    "title": "Realme C35",
+    "brand": "Realme",
+    "category": "smartphones",
+    "description": "The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use. It offers a reliable performance and user-friendly experience.",
+    "price": 12799,
+    "mrp": 15199,
+    "rating": 3.9,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/thumbnail.webp",
+    "specs": {
+      "Brand": "Realme",
+      "SKU": "SMA-REA-REA-128",
+      "Shipping weight": "2 kg",
+      "Dimensions": "25.28 × 8.14 × 29.53 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "90 days return policy"
+    },
+    "stock": 48,
+    "tags": [
+      "smartphones",
+      "realme"
+    ],
+    "reviews": [
+      {
+        "id": "128-g1",
+        "rating": 3,
+        "comment": "Disappointed. Charger is slow, takes ages to fully charge. Camera struggles in low light, photos look grainy.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-08-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "128-g4",
+        "rating": 5,
+        "comment": "Really happy with this. Battery easily lasts a full day of heavy use. Speakers are loud and the sound is clear.",
+        "reviewerName": "Siddharth Rao",
+        "date": "2026-08-10T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "128-g2",
+        "rating": 5,
+        "comment": "Really happy with this. Battery easily lasts a full day of heavy use. Build quality feels premium in the hand.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-02-12T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "128-g3",
+        "rating": 4,
+        "comment": "Really happy with this. Battery easily lasts a full day of heavy use. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-02-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "128-r1",
+        "rating": 4,
+        "comment": "Great product!",
+        "reviewerName": "Penelope King",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "128-r2",
+        "rating": 2,
+        "comment": "Very unhappy with my purchase!",
+        "reviewerName": "Asher Scott",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "128-r3",
+        "rating": 4,
+        "comment": "Highly impressed!",
+        "reviewerName": "Henry Adams",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "129",
+    "title": "Realme X",
+    "brand": "Realme",
+    "category": "smartphones",
+    "description": "The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.",
+    "price": 25499,
+    "mrp": 27499,
+    "rating": 4.3,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/realme-x/thumbnail.webp",
+    "specs": {
+      "Brand": "Realme",
+      "SKU": "SMA-REA-REA-129",
+      "Shipping weight": "4 kg",
+      "Dimensions": "25.59 × 21.42 × 12.75 cm",
+      "Warranty": "1 month warranty",
+      "Shipping": "Ships in 3-5 business days",
+      "Return policy": "No return policy"
+    },
+    "stock": 12,
+    "tags": [
+      "smartphones",
+      "realme"
+    ],
+    "reviews": [
+      {
+        "id": "129-g4",
+        "rating": 5,
+        "comment": "Really happy with this. Build quality feels premium in the hand. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-10-27T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "129-g3",
+        "rating": 5,
+        "comment": "Really happy with this. Build quality feels premium in the hand. Speakers are loud and the sound is clear.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-09-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "129-g1",
+        "rating": 1,
+        "comment": "Charger is slow, takes ages to fully charge.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-06-23T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "129-g2",
+        "rating": 4,
+        "comment": "Really happy with this. Battery easily lasts a full day of heavy use. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-02-01T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "129-r1",
+        "rating": 5,
+        "comment": "Would buy again!",
+        "reviewerName": "Hazel Evans",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "129-r2",
+        "rating": 5,
+        "comment": "Fast shipping!",
+        "reviewerName": "Brayden Fleming",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "129-r3",
+        "rating": 5,
+        "comment": "Very satisfied!",
+        "reviewerName": "Madison Stewart",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "130",
+    "title": "Realme XT",
+    "brand": "Realme",
+    "category": "smartphones",
+    "description": "The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.",
+    "price": 29799,
+    "mrp": 33699,
+    "rating": 3.6,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/thumbnail.webp",
+    "specs": {
+      "Brand": "Realme",
+      "SKU": "SMA-REA-REA-130",
+      "Shipping weight": "3 kg",
+      "Dimensions": "24.98 × 26.73 × 6.5 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 1 month",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 80,
+    "tags": [
+      "smartphones",
+      "realme"
+    ],
+    "reviews": [
+      {
+        "id": "130-g3",
+        "rating": 5,
+        "comment": "The display is bright and sharp, even outdoors. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-11-17T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "130-g6",
+        "rating": 3,
+        "comment": "Decent overall. The display is bright and sharp, even outdoors. But speaker sound is tinny at high volume.",
+        "reviewerName": "Neha Joshi",
+        "date": "2026-11-13T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "130-g4",
+        "rating": 2,
+        "comment": "Bit overpriced for what you get.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-10-25T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "130-g1",
+        "rating": 1,
+        "comment": "Expected better. Charger is slow, takes ages to fully charge.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-08-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "130-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Camera takes crisp photos in daylight. Performance is smooth, no lag while multitasking.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-08-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "130-g5",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Build quality feels premium in the hand. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-04-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "130-r1",
+        "rating": 4,
+        "comment": "Very satisfied!",
+        "reviewerName": "Emily Brown",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "130-r2",
+        "rating": 3,
+        "comment": "Not as described!",
+        "reviewerName": "Ella Cook",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "130-r3",
+        "rating": 5,
+        "comment": "Would buy again!",
+        "reviewerName": "Layla Sullivan",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "131",
+    "title": "Samsung Galaxy S7",
+    "brand": "Samsung",
+    "category": "smartphones",
+    "description": "The Samsung Galaxy S7 is a flagship smartphone known for its sleek design and advanced features. It features a high-resolution display, powerful camera, and robust performance.",
+    "price": 25499,
+    "mrp": 31699,
+    "rating": 3.3,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/thumbnail.webp",
+    "specs": {
+      "Brand": "Samsung",
+      "SKU": "SMA-SAM-SAM-131",
+      "Shipping weight": "10 kg",
+      "Dimensions": "13.55 × 24.24 × 5.63 cm",
+      "Warranty": "3 months warranty",
+      "Shipping": "Ships in 3-5 business days",
+      "Return policy": "No return policy"
+    },
+    "stock": 67,
+    "tags": [
+      "smartphones",
+      "samsung galaxy"
+    ],
+    "reviews": [
+      {
+        "id": "131-g2",
+        "rating": 4,
+        "comment": "Solid purchase. Performance is smooth, no lag while multitasking. Camera takes crisp photos in daylight.",
+        "reviewerName": "Neha Joshi",
+        "date": "2026-09-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "131-g3",
+        "rating": 4,
+        "comment": "Solid purchase. Battery easily lasts a full day of heavy use. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-09-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "131-g1",
+        "rating": 2,
+        "comment": "Expected better. Battery drains fast when gaming.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-05-31T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "131-g4",
+        "rating": 4,
+        "comment": "Mixed feelings. The display is bright and sharp, even outdoors. But bit overpriced for what you get.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-04-04T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "131-r1",
+        "rating": 1,
+        "comment": "Not as described!",
+        "reviewerName": "Julian James",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "131-r2",
+        "rating": 4,
+        "comment": "Fast shipping!",
+        "reviewerName": "Lucas Gordon",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "131-r3",
+        "rating": 4,
+        "comment": "Excellent quality!",
+        "reviewerName": "Ava Taylor",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "132",
+    "title": "Samsung Galaxy S8",
+    "brand": "Samsung",
+    "category": "smartphones",
+    "description": "The Samsung Galaxy S8 is a premium smartphone with an Infinity Display, offering a stunning visual experience. It boasts advanced camera capabilities and cutting-edge technology.",
+    "price": 42499,
+    "mrp": 52799,
+    "rating": 4,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp",
+    "specs": {
+      "Brand": "Samsung",
+      "SKU": "SMA-SAM-SAM-132",
+      "Shipping weight": "6 kg",
+      "Dimensions": "23.05 × 26.88 × 15.73 cm",
+      "Warranty": "2 year warranty",
+      "Shipping": "Ships in 1 week",
+      "Return policy": "No return policy"
+    },
+    "stock": 0,
+    "tags": [
+      "smartphones",
+      "samsung galaxy"
+    ],
+    "reviews": [
+      {
+        "id": "132-g3",
+        "rating": 3,
+        "comment": "Okay for the price. Performance is smooth, no lag while multitasking. But speaker sound is tinny at high volume.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-10-30T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "132-g4",
+        "rating": 5,
+        "comment": "Solid purchase. Camera takes crisp photos in daylight. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-08-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "132-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. The display is bright and sharp, even outdoors. Speakers are loud and the sound is clear.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-05-22T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "132-g1",
+        "rating": 3,
+        "comment": "Bit overpriced for what you get. Charger is slow, takes ages to fully charge.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-05-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "132-g5",
+        "rating": 4,
+        "comment": "Decent overall. Build quality feels premium in the hand. But gets warm and heats up during long video calls.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-01-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "132-r1",
+        "rating": 4,
+        "comment": "Highly impressed!",
+        "reviewerName": "Owen Fisher",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "132-r2",
+        "rating": 4,
+        "comment": "Highly impressed!",
+        "reviewerName": "Clara Berry",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "132-r3",
+        "rating": 4,
+        "comment": "Highly recommended!",
+        "reviewerName": "Tyler Davis",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "78",
+    "title": "Apple MacBook Pro 14 Inch Space Grey",
+    "brand": "Apple",
+    "category": "laptops",
+    "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+    "price": 169999,
+    "mrp": 178399,
+    "rating": 4.4,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp",
+    "specs": {
+      "Brand": "Apple",
+      "SKU": "LAP-APP-APP-078",
+      "Shipping weight": "9 kg",
+      "Dimensions": "20.03 × 9.54 × 14.82 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 2 weeks",
+      "Return policy": "90 days return policy"
+    },
+    "stock": 24,
+    "tags": [
+      "laptops",
+      "apple"
+    ],
+    "reviews": [
+      {
+        "id": "78-g1",
+        "rating": 3,
+        "comment": "Disappointed. Camera struggles in low light, photos look grainy. Gets warm and heats up during long video calls.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-11-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "78-g5",
+        "rating": 4,
+        "comment": "Really happy with this. The display is bright and sharp, even outdoors. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-08-08T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "78-g3",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Delivery was quick and the packaging was secure. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-06-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "78-g4",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Delivery was quick and the packaging was secure. Camera takes crisp photos in daylight.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-03-21T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "78-g2",
+        "rating": 5,
+        "comment": "Really happy with this. Camera takes crisp photos in daylight. Performance is smooth, no lag while multitasking.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-03-05T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "78-r1",
+        "rating": 5,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Hazel Evans",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "78-r2",
+        "rating": 5,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Christopher West",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "78-r3",
+        "rating": 4,
+        "comment": "Very satisfied!",
+        "reviewerName": "Aubrey Garcia",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "79",
+    "title": "Asus Zenbook Pro Dual Screen Laptop",
+    "brand": "Asus",
+    "category": "laptops",
+    "description": "The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.",
+    "price": 152999,
+    "mrp": 172199,
+    "rating": 4.1,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp",
+    "specs": {
+      "Brand": "Asus",
+      "SKU": "LAP-ASU-ASU-079",
+      "Shipping weight": "9 kg",
+      "Dimensions": "16.6 × 11.49 × 10.89 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 1 month",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 45,
+    "tags": [
+      "laptops"
+    ],
+    "reviews": [
+      {
+        "id": "79-g2",
+        "rating": 4,
+        "comment": "Loving it so far. Battery easily lasts a full day of heavy use. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-09-13T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "79-g3",
+        "rating": 4,
+        "comment": "Really happy with this. Build quality feels premium in the hand. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-07-21T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "79-g5",
+        "rating": 5,
+        "comment": "Solid purchase. Camera takes crisp photos in daylight. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-06-21T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "79-g4",
+        "rating": 4,
+        "comment": "Performance is smooth, no lag while multitasking. Camera takes crisp photos in daylight.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-04-22T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "79-g1",
+        "rating": 3,
+        "comment": "Not great. Speaker sound is tinny at high volume.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-04-04T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "79-r1",
+        "rating": 4,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Michael Johnson",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "79-r2",
+        "rating": 5,
+        "comment": "Highly recommended!",
+        "reviewerName": "Zoe Bennett",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "79-r3",
+        "rating": 4,
+        "comment": "Very satisfied!",
+        "reviewerName": "Mila Hernandez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ],
+    "sponsored": true
+  },
+  {
+    "id": "80",
+    "title": "Huawei Matebook X Pro",
+    "brand": "Huawei",
+    "category": "laptops",
+    "description": "The Huawei Matebook X Pro is a slim and stylish laptop with a high-resolution touchscreen display, offering a premium experience for users on the go.",
+    "price": 118999,
+    "mrp": 131399,
+    "rating": 3.4,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/thumbnail.webp",
+    "specs": {
+      "Brand": "Huawei",
+      "SKU": "LAP-HUA-HUA-080",
+      "Shipping weight": "9 kg",
+      "Dimensions": "18.21 × 22.83 × 17.26 cm",
+      "Warranty": "No warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 75,
+    "tags": [
+      "laptops"
+    ],
+    "reviews": [
+      {
+        "id": "80-g4",
+        "rating": 4,
+        "comment": "Delivery was quick and the packaging was secure. But camera struggles in low light, photos look grainy.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-09-14T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "80-g1",
+        "rating": 2,
+        "comment": "Expected better. Camera struggles in low light, photos look grainy. Battery drains fast when gaming.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-06-21T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "80-g5",
+        "rating": 5,
+        "comment": "Performance is smooth, no lag while multitasking. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-06-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "80-g2",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Battery easily lasts a full day of heavy use. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-06-15T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "80-g3",
+        "rating": 3,
+        "comment": "Charger is slow, takes ages to fully charge. Camera struggles in low light, photos look grainy.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-04-27T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "80-r1",
+        "rating": 4,
+        "comment": "Very satisfied!",
+        "reviewerName": "Evan Wright",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "80-r2",
+        "rating": 4,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Hunter Gordon",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "80-r3",
+        "rating": 1,
+        "comment": "Not worth the price!",
+        "reviewerName": "William Gonzalez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "81",
+    "title": "Lenovo Yoga 920",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "description": "The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability.",
+    "price": 93499,
+    "mrp": 100099,
+    "rating": 4.5,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/thumbnail.webp",
+    "specs": {
+      "Brand": "Lenovo",
+      "SKU": "LAP-LEN-LEN-081",
+      "Shipping weight": "9 kg",
+      "Dimensions": "20.84 × 22.68 × 17.39 cm",
+      "Warranty": "6 months warranty",
+      "Shipping": "Ships in 2 weeks",
+      "Return policy": "No return policy"
+    },
+    "stock": 40,
+    "tags": [
+      "laptops"
+    ],
+    "reviews": [
+      {
+        "id": "81-g5",
+        "rating": 5,
+        "comment": "Battery easily lasts a full day of heavy use. Speakers are loud and the sound is clear.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-09-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "81-g1",
+        "rating": 3,
+        "comment": "Disappointed. Charger is slow, takes ages to fully charge. Battery drains fast when gaming.",
+        "reviewerName": "Neha Joshi",
+        "date": "2026-05-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "81-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. The display is bright and sharp, even outdoors. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-03-09T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "81-g3",
+        "rating": 5,
+        "comment": "Really happy with this. Camera takes crisp photos in daylight. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-02-01T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "81-g4",
+        "rating": 5,
+        "comment": "Solid purchase. Camera takes crisp photos in daylight. The display is bright and sharp, even outdoors.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-01-23T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "81-r1",
+        "rating": 4,
+        "comment": "Would buy again!",
+        "reviewerName": "Bella Gonzalez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "81-r2",
+        "rating": 5,
+        "comment": "Great value for money!",
+        "reviewerName": "Nathan Reed",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "81-r3",
+        "rating": 4,
+        "comment": "Great value for money!",
+        "reviewerName": "Hazel Gardner",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "82",
+    "title": "New DELL XPS 13 9300 Laptop",
+    "brand": "Dell",
+    "category": "laptops",
+    "description": "The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks.",
+    "price": 127499,
+    "mrp": 144799,
+    "rating": 3.8,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/thumbnail.webp",
+    "specs": {
+      "Brand": "Dell",
+      "SKU": "LAP-DEL-DEL-082",
+      "Shipping weight": "2 kg",
+      "Dimensions": "13.76 × 29 × 21.42 cm",
+      "Warranty": "2 year warranty",
+      "Shipping": "Ships in 2 weeks",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 74,
+    "tags": [
+      "laptops"
+    ],
+    "reviews": [
+      {
+        "id": "82-g3",
+        "rating": 5,
+        "comment": "Loving it so far. Build quality feels premium in the hand. Performance is smooth, no lag while multitasking.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-11-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "82-g6",
+        "rating": 5,
+        "comment": "Exceeded my expectations. The display is bright and sharp, even outdoors. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-10-08T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "82-g4",
+        "rating": 3,
+        "comment": "Okay for the price. The display is bright and sharp, even outdoors. But speaker sound is tinny at high volume.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-08-30T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "82-g2",
+        "rating": 5,
+        "comment": "Solid purchase. Performance is smooth, no lag while multitasking. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-08-12T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "82-g1",
+        "rating": 2,
+        "comment": "Expected better. Camera struggles in low light, photos look grainy.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-05-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "82-g5",
+        "rating": 5,
+        "comment": "Loving it so far. Delivery was quick and the packaging was secure. Battery easily lasts a full day of heavy use.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-02-09T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "82-r1",
+        "rating": 3,
+        "comment": "Poor quality!",
+        "reviewerName": "Charlotte Lopez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "82-r2",
+        "rating": 4,
+        "comment": "Very satisfied!",
+        "reviewerName": "Alice Smith",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "82-r3",
+        "rating": 2,
+        "comment": "Disappointing product!",
+        "reviewerName": "Ava Taylor",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "83",
+    "title": "Blue & Black Check Shirt",
+    "brand": "Fashion Trends",
+    "category": "mens-shirts",
+    "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+    "price": 2599,
+    "mrp": 3099,
+    "rating": 3.3,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/4.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp",
+    "specs": {
+      "Brand": "Fashion Trends",
+      "SKU": "MEN-FAS-BLU-083",
+      "Shipping weight": "4 kg",
+      "Dimensions": "27.49 × 23.73 × 28.61 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 3-5 business days",
+      "Return policy": "30 days return policy"
+    },
+    "stock": 38,
+    "tags": [
+      "clothing",
+      "men's shirts"
+    ],
+    "reviews": [
+      {
+        "id": "83-g4",
+        "rating": 4,
+        "comment": "Really happy with this. Stitching is neat and feels durable. Fit is true to size, sits well on the shoulders.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-09-21T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "83-g2",
+        "rating": 4,
+        "comment": "Fabric is soft and breathable, great for summer. Fit is true to size, sits well on the shoulders.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-07-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "83-g1",
+        "rating": 1,
+        "comment": "Disappointed. Colour faded a little after the first wash.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-02-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "83-g3",
+        "rating": 4,
+        "comment": "Fabric is soft and breathable, great for summer. Looks smart enough for office wear.",
+        "reviewerName": "Siddharth Rao",
+        "date": "2026-01-31T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "83-r1",
+        "rating": 1,
+        "comment": "Waste of money!",
+        "reviewerName": "Logan Lee",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "83-r2",
+        "rating": 5,
+        "comment": "Very satisfied!",
+        "reviewerName": "Zachary Lee",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "83-r3",
+        "rating": 4,
+        "comment": "Fast shipping!",
+        "reviewerName": "Aurora Rodriguez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "84",
+    "title": "Gigabyte Aorus Men Tshirt",
+    "brand": "Gigabyte",
+    "category": "mens-shirts",
+    "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+    "price": 2099,
+    "mrp": 2199,
+    "rating": 3.1,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/4.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/thumbnail.webp",
+    "specs": {
+      "Brand": "Gigabyte",
+      "SKU": "MEN-GIG-GIG-084",
+      "Shipping weight": "4 kg",
+      "Dimensions": "22.31 × 26.47 × 13.27 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "30 days return policy"
+    },
+    "stock": 90,
+    "tags": [
+      "clothing",
+      "men's t-shirts"
+    ],
+    "reviews": [
+      {
+        "id": "84-g1",
+        "rating": 3,
+        "comment": "Expected better. Fabric wrinkles easily, needs ironing every time.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-08-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "84-g4",
+        "rating": 1,
+        "comment": "Not great. Shrank slightly after washing.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-08-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "84-g3",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Colour stayed the same after several washes. Fabric is soft and breathable, great for summer.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-07-03T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "84-g2",
+        "rating": 3,
+        "comment": "Not great. Loose threads near the stitching on the collar. Fabric wrinkles easily, needs ironing every time.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-07-01T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "84-r1",
+        "rating": 5,
+        "comment": "Excellent quality!",
+        "reviewerName": "Amelia Perez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "84-r2",
+        "rating": 5,
+        "comment": "Awesome product!",
+        "reviewerName": "Tyler Davis",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "84-r3",
+        "rating": 1,
+        "comment": "Disappointing product!",
+        "reviewerName": "Harper King",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ],
+    "sponsored": true
+  },
+  {
+    "id": "85",
+    "title": "Man Plaid Shirt",
+    "brand": "Classic Wear",
+    "category": "mens-shirts",
+    "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+    "price": 2999,
+    "mrp": 3799,
+    "rating": 3.8,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/4.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/thumbnail.webp",
+    "specs": {
+      "Brand": "Classic Wear",
+      "SKU": "MEN-CLA-PLA-085",
+      "Shipping weight": "3 kg",
+      "Dimensions": "9.34 × 5.97 × 10.85 cm",
+      "Warranty": "1 week warranty",
+      "Shipping": "Ships in 1-2 business days",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 82,
+    "tags": [
+      "clothing",
+      "men's shirts"
+    ],
+    "reviews": [
+      {
+        "id": "85-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Colour stayed the same after several washes. Looks smart enough for office wear.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-08-17T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "85-g4",
+        "rating": 5,
+        "comment": "Loving it so far. Stitching is neat and feels durable. Good value for money at this price.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-08-03T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "85-g3",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Colour stayed the same after several washes. Fabric is soft and breathable, great for summer.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-07-23T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "85-g1",
+        "rating": 3,
+        "comment": "Fabric wrinkles easily, needs ironing every time.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-07-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "85-g5",
+        "rating": 3,
+        "comment": "Runs a size small, order one size up for a proper fit. Colour faded a little after the first wash.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-02-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "85-r1",
+        "rating": 3,
+        "comment": "Disappointing product!",
+        "reviewerName": "Aubrey Wagner",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "85-r2",
+        "rating": 4,
+        "comment": "Awesome product!",
+        "reviewerName": "Evan Reed",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "85-r3",
+        "rating": 2,
+        "comment": "Very disappointed!",
+        "reviewerName": "Evelyn Gonzalez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "86",
+    "title": "Man Short Sleeve Shirt",
+    "brand": "Casual Comfort",
+    "category": "mens-shirts",
+    "description": "The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.",
+    "price": 1699,
+    "mrp": 1899,
+    "rating": 2.9,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/4.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/thumbnail.webp",
+    "specs": {
+      "Brand": "Casual Comfort",
+      "SKU": "MEN-CAS-SHO-086",
+      "Shipping weight": "2 kg",
+      "Dimensions": "5.02 × 16.57 × 9.6 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 2 weeks",
+      "Return policy": "30 days return policy"
+    },
+    "stock": 2,
+    "tags": [
+      "clothing",
+      "men's shirts"
+    ],
+    "reviews": [
+      {
+        "id": "86-g1",
+        "rating": 1,
+        "comment": "Shrank slightly after washing.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-10-28T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "86-g2",
+        "rating": 5,
+        "comment": "Really happy with this. Looks smart enough for office wear. Colour stayed the same after several washes.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-10-17T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "86-g4",
+        "rating": 1,
+        "comment": "Fabric wrinkles easily, needs ironing every time. Runs a size small, order one size up for a proper fit.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-07-27T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "86-g3",
+        "rating": 5,
+        "comment": "Solid purchase. Stitching is neat and feels durable. Fit is true to size, sits well on the shoulders.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-05-17T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "86-r1",
+        "rating": 5,
+        "comment": "Highly recommended!",
+        "reviewerName": "Charlotte Lopez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "86-r2",
+        "rating": 2,
+        "comment": "Poor quality!",
+        "reviewerName": "Ellie Stewart",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "86-r3",
+        "rating": 1,
+        "comment": "Would not recommend!",
+        "reviewerName": "Sadie Morales",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "87",
+    "title": "Men Check Shirt",
+    "brand": "Urban Chic",
+    "category": "mens-shirts",
+    "description": "The Men Check Shirt is a classic and versatile shirt featuring a stylish check pattern. Suitable for various occasions, it adds a smart and polished touch to your wardrobe.",
+    "price": 2399,
+    "mrp": 2799,
+    "rating": 3.9,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/4.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/thumbnail.webp",
+    "specs": {
+      "Brand": "Urban Chic",
+      "SKU": "MEN-URB-CHE-087",
+      "Shipping weight": "10 kg",
+      "Dimensions": "23.48 × 7.03 × 27.33 cm",
+      "Warranty": "No warranty",
+      "Shipping": "Ships in 1-2 business days",
+      "Return policy": "30 days return policy"
+    },
+    "stock": 95,
+    "tags": [
+      "clothing",
+      "men's shirts"
+    ],
+    "reviews": [
+      {
+        "id": "87-g3",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Good value for money at this price. Looks smart enough for office wear.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-11-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "87-g6",
+        "rating": 4,
+        "comment": "Good value for money at this price. Stitching is neat and feels durable.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-09-15T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "87-g2",
+        "rating": 5,
+        "comment": "Really happy with this. Looks smart enough for office wear. Colour stayed the same after several washes.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-07-29T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "87-g5",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Looks smart enough for office wear. Fabric is soft and breathable, great for summer.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-06-15T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "87-g4",
+        "rating": 5,
+        "comment": "Solid purchase. Colour stayed the same after several washes. Stitching is neat and feels durable.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-06-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "87-g1",
+        "rating": 2,
+        "comment": "Shrank slightly after washing.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-05-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "87-r1",
+        "rating": 3,
+        "comment": "Would not recommend!",
+        "reviewerName": "Mateo Nguyen",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "87-r2",
+        "rating": 5,
+        "comment": "Fast shipping!",
+        "reviewerName": "Lucas Allen",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "87-r3",
+        "rating": 2,
+        "comment": "Very unhappy with my purchase!",
+        "reviewerName": "Henry Adams",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "172",
+    "title": "Blue Women's Handbag",
+    "brand": "Fashionista",
+    "category": "womens-bags",
+    "description": "The Blue Women's Handbag is a stylish and spacious accessory for everyday use. With a vibrant blue color and multiple compartments, it combines fashion and functionality.",
+    "price": 4299,
+    "mrp": 5299,
+    "rating": 3.5,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/thumbnail.webp",
+    "specs": {
+      "Brand": "Fashionista",
+      "SKU": "WOM-FAS-BLU-172",
+      "Shipping weight": "7 kg",
+      "Dimensions": "14.12 × 11.89 × 25.69 cm",
+      "Warranty": "1 year warranty",
+      "Shipping": "Ships in 1 week",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 76,
+    "tags": [
+      "fashion accessories",
+      "handbags"
+    ],
+    "reviews": [
+      {
+        "id": "172-g2",
+        "rating": 5,
+        "comment": "Solid purchase. Good value for money at this price. Zip and hardware feel durable.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-09-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "172-g1",
+        "rating": 2,
+        "comment": "Expected better. Strap is thin and digs into the shoulder. Zip feels flimsy and got stuck a few times.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-08-30T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "172-g5",
+        "rating": 5,
+        "comment": "Plenty of space, fits a laptop and daily essentials. Material feels sturdy and well made.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-05-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "172-g3",
+        "rating": 3,
+        "comment": "Decent overall. Material feels sturdy and well made. But had a strong chemical smell out of the box.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-05-04T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "172-g4",
+        "rating": 3,
+        "comment": "Disappointed. Material scratches easily. Smaller than it looks in the photos.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-04-03T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "172-r1",
+        "rating": 3,
+        "comment": "Waste of money!",
+        "reviewerName": "Grace Perry",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "172-r2",
+        "rating": 3,
+        "comment": "Not worth the price!",
+        "reviewerName": "Evelyn Sanchez",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "172-r3",
+        "rating": 4,
+        "comment": "Highly impressed!",
+        "reviewerName": "Eli Ward",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "173",
+    "title": "Heshe Women's Leather Bag",
+    "brand": "Heshe",
+    "category": "womens-bags",
+    "description": "The Heshe Women's Leather Bag is a luxurious and high-quality leather bag for the sophisticated woman. With a timeless design and durable craftsmanship, it's a versatile accessory.",
+    "price": 11099,
+    "mrp": 11599,
+    "rating": 4,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/thumbnail.webp",
+    "specs": {
+      "Brand": "Heshe",
+      "SKU": "WOM-HES-HES-173",
+      "Shipping weight": "3 kg",
+      "Dimensions": "28.66 × 20.56 × 6.62 cm",
+      "Warranty": "5 year warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "90 days return policy"
+    },
+    "stock": 99,
+    "tags": [
+      "fashion accessories",
+      "leather bags"
+    ],
+    "reviews": [
+      {
+        "id": "173-g3",
+        "rating": 4,
+        "comment": "Loving it so far. Looks elegant, matches most outfits. Zip and hardware feel durable.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-09-21T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "173-g2",
+        "rating": 4,
+        "comment": "Plenty of space, fits a laptop and daily essentials. Strap is comfortable even when the bag is full.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-08-04T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "173-g1",
+        "rating": 3,
+        "comment": "Disappointed. Material scratches easily.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-02-18T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "173-g4",
+        "rating": 4,
+        "comment": "Mixed feelings. Looks elegant, matches most outfits. But smaller than it looks in the photos.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-01-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "173-r1",
+        "rating": 5,
+        "comment": "Excellent quality!",
+        "reviewerName": "Hunter Gordon",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "173-r2",
+        "rating": 4,
+        "comment": "Awesome product!",
+        "reviewerName": "Mason Parker",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "173-r3",
+        "rating": 4,
+        "comment": "Awesome product!",
+        "reviewerName": "William Gonzalez",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ],
+    "sponsored": true
+  },
+  {
+    "id": "174",
+    "title": "Prada Women Bag",
+    "brand": "Prada",
+    "category": "womens-bags",
+    "description": "The Prada Women Bag is an iconic designer bag that exudes elegance and luxury. Crafted with precision and featuring the Prada logo, it's a statement piece for fashion enthusiasts.",
+    "price": 50999,
+    "mrp": 59399,
+    "rating": 3.9,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/thumbnail.webp",
+    "specs": {
+      "Brand": "Prada",
+      "SKU": "WOM-PRA-PRA-174",
+      "Shipping weight": "4 kg",
+      "Dimensions": "21.84 × 22.19 × 13.41 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 1-2 business days",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 75,
+    "tags": [
+      "fashion accessories",
+      "designer bags"
+    ],
+    "reviews": [
+      {
+        "id": "174-g3",
+        "rating": 5,
+        "comment": "Solid purchase. Zip and hardware feel durable. Strap is comfortable even when the bag is full.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-07-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "174-g4",
+        "rating": 4,
+        "comment": "Good value for money at this price. Strap is comfortable even when the bag is full.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-06-12T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "174-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Strap is comfortable even when the bag is full. Good value for money at this price.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-06-04T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "174-g1",
+        "rating": 3,
+        "comment": "Expected better. Strap is thin and digs into the shoulder. Material scratches easily.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-05-27T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "174-g5",
+        "rating": 3,
+        "comment": "Looks elegant, matches most outfits. But smaller than it looks in the photos.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-03-25T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "174-r1",
+        "rating": 2,
+        "comment": "Would not buy again!",
+        "reviewerName": "Caleb Perkins",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "174-r2",
+        "rating": 4,
+        "comment": "Great value for money!",
+        "reviewerName": "Carter Baker",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "174-r3",
+        "rating": 5,
+        "comment": "Highly recommended!",
+        "reviewerName": "Lucas Ramirez",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "175",
+    "title": "White Faux Leather Backpack",
+    "brand": "Urban Chic",
+    "category": "womens-bags",
+    "description": "The White Faux Leather Backpack is a trendy and practical backpack for the modern woman. With a sleek white design and ample storage space, it's perfect for both casual and on-the-go styles.",
+    "price": 3399,
+    "mrp": 4099,
+    "rating": 3.9,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/thumbnail.webp",
+    "specs": {
+      "Brand": "Urban Chic",
+      "SKU": "WOM-URB-WHI-175",
+      "Shipping weight": "7 kg",
+      "Dimensions": "14.31 × 23.29 × 28.91 cm",
+      "Warranty": "2 year warranty",
+      "Shipping": "Ships in 1 week",
+      "Return policy": "90 days return policy"
+    },
+    "stock": 39,
+    "tags": [
+      "fashion accessories",
+      "backpacks"
+    ],
+    "reviews": [
+      {
+        "id": "175-g3",
+        "rating": 4,
+        "comment": "Really happy with this. Strap is comfortable even when the bag is full. Looks elegant, matches most outfits.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-11-08T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "175-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Good value for money at this price. Plenty of space, fits a laptop and daily essentials.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-10-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "175-g1",
+        "rating": 3,
+        "comment": "Not great. Had a strong chemical smell out of the box. Strap is thin and digs into the shoulder.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-06-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "175-g4",
+        "rating": 5,
+        "comment": "Loving it so far. Plenty of space, fits a laptop and daily essentials. Material feels sturdy and well made.",
+        "reviewerName": "Siddharth Rao",
+        "date": "2026-02-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "175-r1",
+        "rating": 4,
+        "comment": "Awesome product!",
+        "reviewerName": "Ava Harrison",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "175-r2",
+        "rating": 1,
+        "comment": "Not as described!",
+        "reviewerName": "Liam Garcia",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "175-r3",
+        "rating": 5,
+        "comment": "Great value for money!",
+        "reviewerName": "Cameron Perez",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "176",
+    "title": "Women Handbag Black",
+    "brand": "Elegance Collection",
+    "category": "womens-bags",
+    "description": "The Women Handbag in Black is a classic and versatile accessory that complements various outfits. With a timeless black color and functional design, it's a must-have in every woman's wardrobe.",
+    "price": 5099,
+    "mrp": 5799,
+    "rating": 4.2,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/thumbnail.webp",
+    "specs": {
+      "Brand": "Elegance Collection",
+      "SKU": "WOM-ELE-WOM-176",
+      "Shipping weight": "6 kg",
+      "Dimensions": "29.76 × 12.34 × 15.82 cm",
+      "Warranty": "Lifetime warranty",
+      "Shipping": "Ships in 1 month",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 11,
+    "tags": [
+      "fashion accessories",
+      "handbags"
+    ],
+    "reviews": [
+      {
+        "id": "176-g6",
+        "rating": 5,
+        "comment": "Loving it so far. Good value for money at this price. Plenty of space, fits a laptop and daily essentials.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-11-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "176-g5",
+        "rating": 5,
+        "comment": "Solid purchase. Plenty of space, fits a laptop and daily essentials. Material feels sturdy and well made.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-10-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "176-g4",
+        "rating": 5,
+        "comment": "Solid purchase. Zip and hardware feel durable. Strap is comfortable even when the bag is full.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-10-03T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "176-g3",
+        "rating": 5,
+        "comment": "Plenty of space, fits a laptop and daily essentials. Material feels sturdy and well made.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-08-14T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "176-g1",
+        "rating": 3,
+        "comment": "Disappointed. Material scratches easily.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-08-04T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "176-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Material feels sturdy and well made. Zip and hardware feel durable.",
+        "reviewerName": "Arjun Mehta",
+        "date": "2026-01-28T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "176-r1",
+        "rating": 4,
+        "comment": "Very pleased!",
+        "reviewerName": "Natalie Price",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "176-r2",
+        "rating": 5,
+        "comment": "Great product!",
+        "reviewerName": "Emily Johnson",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "176-r3",
+        "rating": 1,
+        "comment": "Waste of money!",
+        "reviewerName": "Henry Hill",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "48",
+    "title": "Bamboo Spatula",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo. Ideal for flipping, stirring, and serving various dishes.",
+    "price": 679,
+    "mrp": 699,
+    "rating": 4.2,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-BAM-048",
+      "Shipping weight": "3 kg",
+      "Dimensions": "21.32 × 23.03 × 25.94 cm",
+      "Warranty": "1 month warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 37,
+    "tags": [
+      "kitchen tools",
+      "utensils"
+    ],
+    "reviews": [
+      {
+        "id": "48-g5",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-11-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "48-g2",
+        "rating": 4,
+        "comment": "Really happy with this. Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-10-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "48-g3",
+        "rating": 4,
+        "comment": "Really happy with this. Does the job well and saves time while cooking. Easy to clean, dishwasher safe.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-09-12T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "48-g6",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Handle has a comfortable grip. Sturdy build, feels like it will last years.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-07-15T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "48-g1",
+        "rating": 2,
+        "comment": "Not great. Hard to clean in the corners. Feels flimsy, the plastic parts bend.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-07-08T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "48-g4",
+        "rating": 5,
+        "comment": "Solid purchase. Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-06-18T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "48-r1",
+        "rating": 5,
+        "comment": "Awesome product!",
+        "reviewerName": "Lucas Ramirez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "48-r2",
+        "rating": 5,
+        "comment": "Highly recommended!",
+        "reviewerName": "Caleb Perkins",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "48-r3",
+        "rating": 4,
+        "comment": "Highly recommended!",
+        "reviewerName": "Nolan Gonzalez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "49",
+    "title": "Black Aluminium Cup",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Black Aluminium Cup is a stylish and durable cup suitable for both hot and cold beverages. Its sleek black design adds a modern touch to your drinkware collection.",
+    "price": 509,
+    "mrp": 609,
+    "rating": 3.4,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/1.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/2.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-BLA-049",
+      "Shipping weight": "7 kg",
+      "Dimensions": "5.88 × 5.11 × 10.03 cm",
+      "Warranty": "1 year warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "30 days return policy"
+    },
+    "stock": 75,
+    "tags": [
+      "drinkware",
+      "cups"
+    ],
+    "reviews": [
+      {
+        "id": "49-g3",
+        "rating": 3,
+        "comment": "Easy to clean, dishwasher safe. But coating started peeling after a month.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-10-28T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "49-g1",
+        "rating": 2,
+        "comment": "Disappointed. Coating started peeling after a month.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-08-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "49-g4",
+        "rating": 4,
+        "comment": "Really happy with this. Sturdy build, feels like it will last years. Handle has a comfortable grip.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-08-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "49-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Does the job well and saves time while cooking. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-06-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "49-g5",
+        "rating": 4,
+        "comment": "Handle has a comfortable grip. Does the job well and saves time while cooking.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-02-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "49-g6",
+        "rating": 4,
+        "comment": "Really happy with this. Good value for money at this price. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Arjun Mehta",
+        "date": "2026-01-22T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "49-r1",
+        "rating": 3,
+        "comment": "Very disappointed!",
+        "reviewerName": "Alexander Hernandez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "49-r2",
+        "rating": 5,
+        "comment": "Great value for money!",
+        "reviewerName": "Aurora Rodriguez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "49-r3",
+        "rating": 1,
+        "comment": "Not worth the price!",
+        "reviewerName": "Benjamin Foster",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ],
+    "sponsored": true
+  },
+  {
+    "id": "50",
+    "title": "Black Whisk",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.",
+    "price": 849,
+    "mrp": 949,
+    "rating": 3.4,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-BLA-050",
+      "Shipping weight": "1 kg",
+      "Dimensions": "13.03 × 5.99 × 20.64 cm",
+      "Warranty": "3 months warranty",
+      "Shipping": "Ships in 1 month",
+      "Return policy": "30 days return policy"
+    },
+    "stock": 73,
+    "tags": [
+      "kitchen tools",
+      "utensils"
+    ],
+    "reviews": [
+      {
+        "id": "50-g2",
+        "rating": 4,
+        "comment": "Solid purchase. Delivery was quick and the packaging was secure. Handle has a comfortable grip.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-07-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "50-g4",
+        "rating": 4,
+        "comment": "Really happy with this. Handle has a comfortable grip. Easy to clean, dishwasher safe.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-06-03T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "50-g1",
+        "rating": 2,
+        "comment": "Disappointed. Handle gets hot while cooking.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-05-27T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "50-g5",
+        "rating": 4,
+        "comment": "Loving it so far. Sturdy build, feels like it will last years. Does the job well and saves time while cooking.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-04-10T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "50-g3",
+        "rating": 4,
+        "comment": "Mixed feelings. Sturdy build, feels like it will last years. But smaller than it looks in the photos.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-03-05T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "50-r1",
+        "rating": 3,
+        "comment": "Not worth the price!",
+        "reviewerName": "Cameron Perez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "50-r2",
+        "rating": 1,
+        "comment": "Waste of money!",
+        "reviewerName": "Benjamin Foster",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "50-r3",
+        "rating": 5,
+        "comment": "Very pleased!",
+        "reviewerName": "Paisley Bell",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "51",
+    "title": "Boxed Blender",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.",
+    "price": 3399,
+    "mrp": 3699,
+    "rating": 4.3,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/1.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/2.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/3.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/4.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-BOX-051",
+      "Shipping weight": "1 kg",
+      "Dimensions": "9.05 × 19.45 × 17.59 cm",
+      "Warranty": "5 year warranty",
+      "Shipping": "Ships in 1-2 business days",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 9,
+    "tags": [
+      "kitchen appliances",
+      "blenders"
+    ],
+    "reviews": [
+      {
+        "id": "51-g4",
+        "rating": 5,
+        "comment": "Really happy with this. Does the job well and saves time while cooking. Handle has a comfortable grip.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-11-14T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "51-g5",
+        "rating": 5,
+        "comment": "Solid purchase. Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-10-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "51-g3",
+        "rating": 4,
+        "comment": "Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-08-28T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "51-g6",
+        "rating": 4,
+        "comment": "Sturdy build, feels like it will last years. Does the job well and saves time while cooking.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-07-31T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "51-g2",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Does the job well and saves time while cooking. Good value for money at this price.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-06-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "51-g1",
+        "rating": 2,
+        "comment": "Not great. Handle gets hot while cooking. Feels flimsy, the plastic parts bend.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-02-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "51-r1",
+        "rating": 5,
+        "comment": "Very pleased!",
+        "reviewerName": "Ella Adams",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "51-r2",
+        "rating": 5,
+        "comment": "Would buy again!",
+        "reviewerName": "Ruby Andrews",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "51-r3",
+        "rating": 5,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Aurora Lawson",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "52",
+    "title": "Carbon Steel Wok",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Carbon Steel Wok is a versatile cooking pan suitable for stir-frying, sautéing, and deep frying. Its sturdy construction ensures even heat distribution for delicious meals.",
+    "price": 2599,
+    "mrp": 2799,
+    "rating": 4,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-CAR-052",
+      "Shipping weight": "2 kg",
+      "Dimensions": "27.69 × 7.54 × 10.11 cm",
+      "Warranty": "2 year warranty",
+      "Shipping": "Ships in 1-2 business days",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 40,
+    "tags": [
+      "cookware",
+      "woks"
+    ],
+    "reviews": [
+      {
+        "id": "52-g6",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Neha Joshi",
+        "date": "2026-09-15T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "52-g4",
+        "rating": 4,
+        "comment": "Delivery was quick and the packaging was secure. Good value for money at this price.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-06-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "52-g2",
+        "rating": 3,
+        "comment": "Decent overall. Good value for money at this price. But hard to clean in the corners.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-05-18T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "52-g1",
+        "rating": 2,
+        "comment": "Hard to clean in the corners.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-02-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "52-g5",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-02-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "52-g3",
+        "rating": 5,
+        "comment": "Loving it so far. Handle has a comfortable grip. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-02-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "52-r1",
+        "rating": 4,
+        "comment": "Excellent quality!",
+        "reviewerName": "Nolan Bryant",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "52-r2",
+        "rating": 4,
+        "comment": "Highly impressed!",
+        "reviewerName": "Luna Perez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "52-r3",
+        "rating": 5,
+        "comment": "Very satisfied!",
+        "reviewerName": "Noah Lewis",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "53",
+    "title": "Chopping Board",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Chopping Board is an essential kitchen accessory for food preparation. Made from durable material, it provides a safe and hygienic surface for cutting and chopping.",
+    "price": 1099,
+    "mrp": 1199,
+    "rating": 4,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-CHO-053",
+      "Shipping weight": "2 kg",
+      "Dimensions": "15.6 × 6.93 × 8.51 cm",
+      "Warranty": "3 months warranty",
+      "Shipping": "Ships in 2 weeks",
+      "Return policy": "No return policy"
+    },
+    "stock": 14,
+    "tags": [
+      "kitchen tools",
+      "cutting boards"
+    ],
+    "reviews": [
+      {
+        "id": "53-g4",
+        "rating": 4,
+        "comment": "Delivery was quick and the packaging was secure. But hard to clean in the corners.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-09-01T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "53-g1",
+        "rating": 2,
+        "comment": "Expected better. Feels flimsy, the plastic parts bend. Handle gets hot while cooking.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-08-23T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "53-g3",
+        "rating": 4,
+        "comment": "Decent overall. Handle has a comfortable grip. But handle gets hot while cooking.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-07-14T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "53-g5",
+        "rating": 5,
+        "comment": "Solid purchase. Sturdy build, feels like it will last years. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-05-03T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "53-g2",
+        "rating": 4,
+        "comment": "Does the job well and saves time while cooking. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-04-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "53-r1",
+        "rating": 5,
+        "comment": "Great value for money!",
+        "reviewerName": "Xavier Wright",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "53-r2",
+        "rating": 4,
+        "comment": "Great value for money!",
+        "reviewerName": "Henry Turner",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "53-r3",
+        "rating": 4,
+        "comment": "Fast shipping!",
+        "reviewerName": "Evelyn Walker",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "54",
+    "title": "Citrus Squeezer Yellow",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Citrus Squeezer in Yellow is a handy tool for extracting juice from citrus fruits. Its vibrant color adds a cheerful touch to your kitchen gadgets.",
+    "price": 769,
+    "mrp": 879,
+    "rating": 4,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-CIT-054",
+      "Shipping weight": "2 kg",
+      "Dimensions": "17.16 × 26.8 × 16.29 cm",
+      "Warranty": "2 year warranty",
+      "Shipping": "Ships in 3-5 business days",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 22,
+    "tags": [
+      "kitchen tools",
+      "juicers"
+    ],
+    "reviews": [
+      {
+        "id": "54-g2",
+        "rating": 5,
+        "comment": "Solid purchase. Easy to clean, dishwasher safe. Handle has a comfortable grip.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-06-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "54-g1",
+        "rating": 3,
+        "comment": "Expected better. Smaller than it looks in the photos.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-06-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "54-g3",
+        "rating": 4,
+        "comment": "Loving it so far. Handle has a comfortable grip. Sturdy build, feels like it will last years.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-04-01T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "54-g4",
+        "rating": 3,
+        "comment": "Handle gets hot while cooking. Smaller than it looks in the photos.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-02-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "54-r1",
+        "rating": 4,
+        "comment": "Highly recommended!",
+        "reviewerName": "Lucas Ramirez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "54-r2",
+        "rating": 4,
+        "comment": "Great product!",
+        "reviewerName": "Eleanor Collins",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "54-r3",
+        "rating": 5,
+        "comment": "Highly impressed!",
+        "reviewerName": "Mila Hernandez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "55",
+    "title": "Egg Slicer",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Egg Slicer is a convenient tool for slicing boiled eggs evenly. It's perfect for salads, sandwiches, and other dishes where sliced eggs are desired.",
+    "price": 599,
+    "mrp": 709,
+    "rating": 2.9,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-SLI-055",
+      "Shipping weight": "2 kg",
+      "Dimensions": "10.81 × 19.15 × 13.18 cm",
+      "Warranty": "1 week warranty",
+      "Shipping": "Ships in 1 month",
+      "Return policy": "No return policy"
+    },
+    "stock": 40,
+    "tags": [
+      "kitchen tools",
+      "slicers"
+    ],
+    "reviews": [
+      {
+        "id": "55-g1",
+        "rating": 2,
+        "comment": "Not great. Coating started peeling after a month. Smaller than it looks in the photos.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-10-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "55-g4",
+        "rating": 3,
+        "comment": "Decent overall. Delivery was quick and the packaging was secure. But handle gets hot while cooking.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-06-18T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "55-g3",
+        "rating": 3,
+        "comment": "Disappointed. Handle gets hot while cooking.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-05-28T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "55-g2",
+        "rating": 4,
+        "comment": "Loving it so far. Does the job well and saves time while cooking. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-03-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "55-r1",
+        "rating": 3,
+        "comment": "Very dissatisfied!",
+        "reviewerName": "Harper Garcia",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "55-r2",
+        "rating": 4,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Lily Torres",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "55-r3",
+        "rating": 1,
+        "comment": "Not worth the price!",
+        "reviewerName": "Tyler Davis",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "56",
+    "title": "Electric Stove",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Electric Stove provides a portable and efficient cooking solution. Ideal for small kitchens or as an additional cooking surface for various culinary needs.",
+    "price": 4299,
+    "mrp": 5099,
+    "rating": 3.4,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/1.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/2.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/3.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/4.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-ELE-056",
+      "Shipping weight": "5 kg",
+      "Dimensions": "24.17 × 22.55 × 27.49 cm",
+      "Warranty": "2 year warranty",
+      "Shipping": "Ships in 1 week",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 21,
+    "tags": [
+      "kitchen appliances",
+      "cooktops"
+    ],
+    "reviews": [
+      {
+        "id": "56-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Does the job well and saves time while cooking. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-09-28T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "56-g1",
+        "rating": 3,
+        "comment": "Disappointed. Smaller than it looks in the photos. Coating started peeling after a month.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-09-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "56-g3",
+        "rating": 4,
+        "comment": "Good value for money at this price. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-04-15T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "56-g4",
+        "rating": 5,
+        "comment": "Really happy with this. Handle has a comfortable grip. Easy to clean, dishwasher safe.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-03-18T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "56-r1",
+        "rating": 1,
+        "comment": "Would not recommend!",
+        "reviewerName": "Ava Harris",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "56-r2",
+        "rating": 2,
+        "comment": "Very dissatisfied!",
+        "reviewerName": "Liam Smith",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "56-r3",
+        "rating": 4,
+        "comment": "Very pleased!",
+        "reviewerName": "Christian Perez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "57",
+    "title": "Fine Mesh Strainer",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Fine Mesh Strainer is a versatile tool for straining liquids and sifting dry ingredients. Its fine mesh ensures efficient filtering for smooth cooking and baking.",
+    "price": 849,
+    "mrp": 889,
+    "rating": 3.7,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-FIN-057",
+      "Shipping weight": "9 kg",
+      "Dimensions": "18.02 × 13.23 × 15.92 cm",
+      "Warranty": "1 month warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 85,
+    "tags": [
+      "kitchen tools",
+      "strainers"
+    ],
+    "reviews": [
+      {
+        "id": "57-g3",
+        "rating": 4,
+        "comment": "Okay for the price. Easy to clean, dishwasher safe. But hard to clean in the corners.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-10-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "57-g4",
+        "rating": 5,
+        "comment": "Sturdy build, feels like it will last years. Good value for money at this price.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-09-22T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "57-g2",
+        "rating": 3,
+        "comment": "Expected better. Smaller than it looks in the photos. Hard to clean in the corners.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-06-03T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "57-g1",
+        "rating": 3,
+        "comment": "Disappointed. Coating started peeling after a month. Feels flimsy, the plastic parts bend.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-05-12T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "57-r1",
+        "rating": 5,
+        "comment": "Very pleased!",
+        "reviewerName": "Isabella Anderson",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "57-r2",
+        "rating": 4,
+        "comment": "Highly impressed!",
+        "reviewerName": "Aaliyah Hanson",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "57-r3",
+        "rating": 2,
+        "comment": "Would not recommend!",
+        "reviewerName": "Layla Sullivan",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "58",
+    "title": "Fork",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Fork is a classic utensil for various dining and serving purposes. Its durable and ergonomic design makes it a reliable choice for everyday use.",
+    "price": 339,
+    "mrp": 369,
+    "rating": 4,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-FOR-058",
+      "Shipping weight": "9 kg",
+      "Dimensions": "12.3 × 25.91 × 22.57 cm",
+      "Warranty": "No warranty",
+      "Shipping": "Ships in 1 month",
+      "Return policy": "No return policy"
+    },
+    "stock": 7,
+    "tags": [
+      "kitchen tools",
+      "utensils"
+    ],
+    "reviews": [
+      {
+        "id": "58-g1",
+        "rating": 3,
+        "comment": "Not great. Feels flimsy, the plastic parts bend. Smaller than it looks in the photos.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-10-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "58-g2",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Does the job well and saves time while cooking. Handle has a comfortable grip.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-06-29T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "58-g3",
+        "rating": 4,
+        "comment": "Okay for the price. Good value for money at this price. But smaller than it looks in the photos.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-06-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "58-g4",
+        "rating": 4,
+        "comment": "Mixed feelings. Sturdy build, feels like it will last years. But smaller than it looks in the photos.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-06-05T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "58-r1",
+        "rating": 5,
+        "comment": "Highly impressed!",
+        "reviewerName": "Elena Baker",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "58-r2",
+        "rating": 5,
+        "comment": "Very satisfied!",
+        "reviewerName": "Avery Scott",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "58-r3",
+        "rating": 2,
+        "comment": "Would not buy again!",
+        "reviewerName": "Mateo Perez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "title": "Glass",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Glass is a versatile and elegant drinking vessel suitable for a variety of beverages. Its clear design allows you to enjoy the colors and textures of your drinks.",
+    "price": 429,
+    "mrp": 469,
+    "rating": 3.9,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-GLA-059",
+      "Shipping weight": "10 kg",
+      "Dimensions": "20.23 × 24.56 × 26.97 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 46,
+    "tags": [
+      "drinkware",
+      "glasses"
+    ],
+    "reviews": [
+      {
+        "id": "59-g2",
+        "rating": 3,
+        "comment": "Expected better. Hard to clean in the corners.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-10-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "59-g1",
+        "rating": 3,
+        "comment": "Disappointed. Coating started peeling after a month.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-05-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "59-g5",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Sturdy build, feels like it will last years. Delivery was quick and the packaging was secure.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-03-16T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "59-g3",
+        "rating": 4,
+        "comment": "Solid purchase. Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-02-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "59-g4",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Does the job well and saves time while cooking. Handle has a comfortable grip.",
+        "reviewerName": "Arjun Mehta",
+        "date": "2026-02-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "59-r1",
+        "rating": 5,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Jackson Evans",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "59-r2",
+        "rating": 3,
+        "comment": "Waste of money!",
+        "reviewerName": "Nicholas Bailey",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "59-r3",
+        "rating": 5,
+        "comment": "Very satisfied!",
+        "reviewerName": "Nathan Reed",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "60",
+    "title": "Grater Black",
+    "brand": "Generic",
+    "category": "kitchen-accessories",
+    "description": "The Grater in Black is a handy kitchen tool for grating cheese, vegetables, and more. Its sleek design and sharp blades make food preparation efficient and easy.",
+    "price": 939,
+    "mrp": 979,
+    "rating": 3.3,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/thumbnail.webp",
+    "specs": {
+      "SKU": "KIT-BRD-GRA-060",
+      "Shipping weight": "3 kg",
+      "Dimensions": "6.32 × 23.11 × 24.64 cm",
+      "Warranty": "1 month warranty",
+      "Shipping": "Ships in 1 week",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 84,
+    "tags": [
+      "kitchen tools",
+      "graters"
+    ],
+    "reviews": [
+      {
+        "id": "60-g2",
+        "rating": 4,
+        "comment": "Really happy with this. Sturdy build, feels like it will last years. Easy to clean, dishwasher safe.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-09-18T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "60-g3",
+        "rating": 5,
+        "comment": "Really happy with this. Good value for money at this price. Handle has a comfortable grip.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-05-31T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "60-g5",
+        "rating": 2,
+        "comment": "Expected better. Handle gets hot while cooking.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-04-18T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "60-g1",
+        "rating": 3,
+        "comment": "Expected better. Coating started peeling after a month.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-04-08T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "60-g4",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Delivery was quick and the packaging was secure. Sturdy build, feels like it will last years.",
+        "reviewerName": "Sneha Reddy",
+        "date": "2026-02-08T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "60-r1",
+        "rating": 1,
+        "comment": "Would not buy again!",
+        "reviewerName": "Ella Adams",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "60-r2",
+        "rating": 1,
+        "comment": "Not as described!",
+        "reviewerName": "Eli Ward",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "60-r3",
+        "rating": 5,
+        "comment": "Highly impressed!",
+        "reviewerName": "James Garcia",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "title": "Essence Mascara Lash Princess",
+    "brand": "Essence",
+    "category": "beauty",
+    "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+    "price": 849,
+    "mrp": 949,
+    "rating": 3.9,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",
+    "specs": {
+      "Brand": "Essence",
+      "SKU": "BEA-ESS-ESS-001",
+      "Shipping weight": "4 kg",
+      "Dimensions": "15.14 × 13.08 × 22.99 cm",
+      "Warranty": "1 week warranty",
+      "Shipping": "Ships in 3-5 business days",
+      "Return policy": "No return policy"
+    },
+    "stock": 99,
+    "tags": [
+      "beauty",
+      "mascara"
+    ],
+    "reviews": [
+      {
+        "id": "1-g1",
+        "rating": 3,
+        "comment": "Expected better. Fragrance is too strong for me.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-10-31T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "1-g3",
+        "rating": 5,
+        "comment": "Texture is light and absorbs quickly. A little goes a long way, lasts for months.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-10-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "1-g6",
+        "rating": 4,
+        "comment": "Mixed feelings. Lovely fragrance that is not overpowering. But packaging leaked during delivery.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-09-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "1-g2",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Good value for money at this price. Skin feels hydrated and soft all day.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-08-28T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "1-g5",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Texture is light and absorbs quickly. A little goes a long way, lasts for months.",
+        "reviewerName": "Neha Joshi",
+        "date": "2026-05-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "1-g4",
+        "rating": 3,
+        "comment": "Mixed feelings. Good value for money at this price. But fragrance is too strong for me.",
+        "reviewerName": "Divya Kapoor",
+        "date": "2026-04-01T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "1-r1",
+        "rating": 3,
+        "comment": "Would not recommend!",
+        "reviewerName": "Eleanor Collins",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "1-r2",
+        "rating": 4,
+        "comment": "Very satisfied!",
+        "reviewerName": "Lucas Gordon",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "1-r3",
+        "rating": 5,
+        "comment": "Highly impressed!",
+        "reviewerName": "Eleanor Collins",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Eyeshadow Palette with Mirror",
+    "brand": "Glamour Beauty",
+    "category": "beauty",
+    "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+    "price": 1699,
+    "mrp": 2099,
+    "rating": 4,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp",
+    "specs": {
+      "Brand": "Glamour Beauty",
+      "SKU": "BEA-GLA-EYE-002",
+      "Shipping weight": "9 kg",
+      "Dimensions": "9.26 × 22.47 × 27.67 cm",
+      "Warranty": "1 year warranty",
+      "Shipping": "Ships in 2 weeks",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 34,
+    "tags": [
+      "beauty",
+      "eyeshadow"
+    ],
+    "reviews": [
+      {
+        "id": "2-g2",
+        "rating": 5,
+        "comment": "Loving it so far. A little goes a long way, lasts for months. Lovely fragrance that is not overpowering.",
+        "reviewerName": "Arjun Mehta",
+        "date": "2026-09-07T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "2-g1",
+        "rating": 3,
+        "comment": "Disappointed. Fragrance is too strong for me.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-08-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "2-g3",
+        "rating": 4,
+        "comment": "Solid purchase. Texture is light and absorbs quickly. Good value for money at this price.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-08-13T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "2-g5",
+        "rating": 5,
+        "comment": "Solid purchase. Texture is light and absorbs quickly. Gentle on sensitive skin, no irritation.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-06-18T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "2-g4",
+        "rating": 4,
+        "comment": "Okay for the price. A little goes a long way, lasts for months. But quantity is small for the price.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-02-09T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "2-g6",
+        "rating": 5,
+        "comment": "Solid purchase. Good value for money at this price. Texture is light and absorbs quickly.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-02-01T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "2-r1",
+        "rating": 5,
+        "comment": "Great product!",
+        "reviewerName": "Savannah Gomez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "2-r2",
+        "rating": 4,
+        "comment": "Awesome product!",
+        "reviewerName": "Christian Perez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "2-r3",
+        "rating": 1,
+        "comment": "Poor quality!",
+        "reviewerName": "Nicholas Bailey",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ],
+    "sponsored": true
+  },
+  {
+    "id": "3",
+    "title": "Powder Canister",
+    "brand": "Velvet Touch",
+    "category": "beauty",
+    "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+    "price": 1299,
+    "mrp": 1499,
+    "rating": 3.6,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp",
+    "specs": {
+      "Brand": "Velvet Touch",
+      "SKU": "BEA-VEL-POW-003",
+      "Shipping weight": "8 kg",
+      "Dimensions": "29.27 × 27.93 × 20.59 cm",
+      "Warranty": "3 months warranty",
+      "Shipping": "Ships in 1-2 business days",
+      "Return policy": "No return policy"
+    },
+    "stock": 89,
+    "tags": [
+      "beauty",
+      "face powder"
+    ],
+    "reviews": [
+      {
+        "id": "3-g1",
+        "rating": 2,
+        "comment": "Quantity is small for the price.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-11-15T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "3-g5",
+        "rating": 4,
+        "comment": "Solid purchase. Lovely fragrance that is not overpowering. A little goes a long way, lasts for months.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-07-10T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "3-g6",
+        "rating": 3,
+        "comment": "Mixed feelings. Lovely fragrance that is not overpowering. But quantity is small for the price.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-05-14T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "3-g3",
+        "rating": 4,
+        "comment": "Skin feels hydrated and soft all day. Texture is light and absorbs quickly.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-03-05T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "3-g4",
+        "rating": 5,
+        "comment": "Exceeded my expectations. Good value for money at this price. Texture is light and absorbs quickly.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-02-27T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "3-g2",
+        "rating": 4,
+        "comment": "Loving it so far. Lovely fragrance that is not overpowering. Good value for money at this price.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-02-20T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "3-r1",
+        "rating": 4,
+        "comment": "Would buy again!",
+        "reviewerName": "Alexander Jones",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "3-r2",
+        "rating": 5,
+        "comment": "Highly impressed!",
+        "reviewerName": "Elijah Cruz",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "3-r3",
+        "rating": 1,
+        "comment": "Very dissatisfied!",
+        "reviewerName": "Avery Perez",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Red Lipstick",
+    "brand": "Chic Cosmetics",
+    "category": "beauty",
+    "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
+    "price": 1099,
+    "mrp": 1299,
+    "rating": 3.9,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp",
+    "specs": {
+      "Brand": "Chic Cosmetics",
+      "SKU": "BEA-CHI-LIP-004",
+      "Shipping weight": "1 kg",
+      "Dimensions": "18.11 × 28.38 × 22.17 cm",
+      "Warranty": "3 year warranty",
+      "Shipping": "Ships in 1 week",
+      "Return policy": "7 days return policy"
+    },
+    "stock": 91,
+    "tags": [
+      "beauty",
+      "lipstick"
+    ],
+    "reviews": [
+      {
+        "id": "4-g4",
+        "rating": 3,
+        "comment": "Not great. Packaging leaked during delivery. Caused a mild breakout on my skin.",
+        "reviewerName": "Vikram Singh",
+        "date": "2026-07-06T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "4-g1",
+        "rating": 1,
+        "comment": "Quantity is small for the price.",
+        "reviewerName": "Nikhil Chopra",
+        "date": "2026-07-01T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "4-g2",
+        "rating": 5,
+        "comment": "Solid purchase. Skin feels hydrated and soft all day. Texture is light and absorbs quickly.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-03-27T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "4-g3",
+        "rating": 4,
+        "comment": "Loving it so far. Texture is light and absorbs quickly. Good value for money at this price.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-03-19T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "4-r1",
+        "rating": 4,
+        "comment": "Great product!",
+        "reviewerName": "Liam Garcia",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "4-r2",
+        "rating": 5,
+        "comment": "Great product!",
+        "reviewerName": "Ruby Andrews",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "4-r3",
+        "rating": 5,
+        "comment": "Would buy again!",
+        "reviewerName": "Clara Berry",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Red Nail Polish",
+    "brand": "Nail Couture",
+    "category": "beauty",
+    "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+    "price": 769,
+    "mrp": 869,
+    "rating": 3.6,
+    "reviewCount": 7,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp",
+    "specs": {
+      "Brand": "Nail Couture",
+      "SKU": "BEA-NAI-NAI-005",
+      "Shipping weight": "8 kg",
+      "Dimensions": "21.63 × 16.48 × 29.84 cm",
+      "Warranty": "1 month warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "No return policy"
+    },
+    "stock": 79,
+    "tags": [
+      "beauty",
+      "nail polish"
+    ],
+    "reviews": [
+      {
+        "id": "5-g3",
+        "rating": 4,
+        "comment": "Skin feels hydrated and soft all day. A little goes a long way, lasts for months.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-07-17T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "5-g4",
+        "rating": 5,
+        "comment": "Really happy with this. A little goes a long way, lasts for months. Texture is light and absorbs quickly.",
+        "reviewerName": "Aditya Kulkarni",
+        "date": "2026-05-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "5-g1",
+        "rating": 3,
+        "comment": "Packaging leaked during delivery. Quantity is small for the price.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-04-29T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "5-g2",
+        "rating": 5,
+        "comment": "Really happy with this. Skin feels hydrated and soft all day. A little goes a long way, lasts for months.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-02-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "5-r1",
+        "rating": 2,
+        "comment": "Poor quality!",
+        "reviewerName": "Benjamin Wilson",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "5-r2",
+        "rating": 5,
+        "comment": "Great product!",
+        "reviewerName": "Liam Smith",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "5-r3",
+        "rating": 1,
+        "comment": "Very unhappy with my purchase!",
+        "reviewerName": "Clara Berry",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "118",
+    "title": "Attitude Super Leaves Hand Soap",
+    "brand": "Attitude",
+    "category": "skin-care",
+    "description": "Attitude Super Leaves Hand Soap is a natural and nourishing hand soap enriched with the goodness of super leaves. It cleanses and moisturizes your hands, leaving them feeling fresh and soft.",
+    "price": 769,
+    "mrp": 949,
+    "rating": 3.8,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/1.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/2.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/thumbnail.webp",
+    "specs": {
+      "Brand": "Attitude",
+      "SKU": "SKI-ATT-ATT-118",
+      "Shipping weight": "1 kg",
+      "Dimensions": "14.05 × 8.3 × 16.62 cm",
+      "Warranty": "6 months warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "60 days return policy"
+    },
+    "stock": 94,
+    "tags": [
+      "personal care",
+      "hand soap"
+    ],
+    "reviews": [
+      {
+        "id": "118-g5",
+        "rating": 4,
+        "comment": "Skin feels hydrated and soft all day. Good value for money at this price.",
+        "reviewerName": "Siddharth Rao",
+        "date": "2026-09-25T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "118-g1",
+        "rating": 3,
+        "comment": "Expected better. Fragrance is too strong for me. Caused a mild breakout on my skin.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-08-13T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "118-g3",
+        "rating": 2,
+        "comment": "Disappointed. Packaging leaked during delivery.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-08-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "118-g2",
+        "rating": 3,
+        "comment": "Expected better. Texture feels greasy and sticky. Quantity is small for the price.",
+        "reviewerName": "Siddharth Rao",
+        "date": "2026-06-23T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "118-g4",
+        "rating": 4,
+        "comment": "Loving it so far. Texture is light and absorbs quickly. Skin feels hydrated and soft all day.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-03-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "118-r1",
+        "rating": 5,
+        "comment": "Very satisfied!",
+        "reviewerName": "Liam Garcia",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "118-r2",
+        "rating": 4,
+        "comment": "Great product!",
+        "reviewerName": "Victoria McDonald",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "118-r3",
+        "rating": 5,
+        "comment": "Very happy with my purchase!",
+        "reviewerName": "Hannah Robinson",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "119",
+    "title": "Olay Ultra Moisture Shea Butter Body Wash",
+    "brand": "Olay",
+    "category": "skin-care",
+    "description": "Olay Ultra Moisture Shea Butter Body Wash is a luxurious body wash that hydrates and nourishes your skin with the moisturizing power of shea butter. Enjoy a rich lather and silky-smooth skin.",
+    "price": 1099,
+    "mrp": 1399,
+    "rating": 3.6,
+    "reviewCount": 8,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/1.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/2.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/thumbnail.webp",
+    "specs": {
+      "Brand": "Olay",
+      "SKU": "SKI-OLA-OLA-119",
+      "Shipping weight": "4 kg",
+      "Dimensions": "25.23 × 28.33 × 11.89 cm",
+      "Warranty": "1 year warranty",
+      "Shipping": "Ships in 1-2 business days",
+      "Return policy": "30 days return policy"
+    },
+    "stock": 34,
+    "tags": [
+      "personal care",
+      "body wash"
+    ],
+    "reviews": [
+      {
+        "id": "119-g2",
+        "rating": 3,
+        "comment": "Not great. Texture feels greasy and sticky. Caused a mild breakout on my skin.",
+        "reviewerName": "Ananya Iyer",
+        "date": "2026-10-12T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "119-g3",
+        "rating": 5,
+        "comment": "Good value for money at this price. Lovely fragrance that is not overpowering.",
+        "reviewerName": "Meera Pillai",
+        "date": "2026-08-24T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "119-g4",
+        "rating": 3,
+        "comment": "Decent overall. Texture is light and absorbs quickly. But texture feels greasy and sticky.",
+        "reviewerName": "Priya Nair",
+        "date": "2026-08-02T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "119-g1",
+        "rating": 2,
+        "comment": "Disappointed. Caused a mild breakout on my skin. Fragrance is too strong for me.",
+        "reviewerName": "Ishita Bose",
+        "date": "2026-03-17T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "119-g5",
+        "rating": 4,
+        "comment": "Really happy with this. Texture is light and absorbs quickly. Skin feels hydrated and soft all day.",
+        "reviewerName": "Aarav Sharma",
+        "date": "2026-01-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "119-r1",
+        "rating": 4,
+        "comment": "Very satisfied!",
+        "reviewerName": "Abigail Rivera",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "119-r2",
+        "rating": 4,
+        "comment": "Great value for money!",
+        "reviewerName": "Hunter Gordon",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      },
+      {
+        "id": "119-r3",
+        "rating": 4,
+        "comment": "Very pleased!",
+        "reviewerName": "Zoe Bennett",
+        "date": "2025-04-30T09:41:02.053Z",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "120",
+    "title": "Vaseline Men Body and Face Lotion",
+    "brand": "Vaseline",
+    "category": "skin-care",
+    "description": "Vaseline Men Body and Face Lotion is a specially formulated lotion designed to provide long-lasting moisture to men's skin. It absorbs quickly and helps keep the skin hydrated and healthy.",
+    "price": 849,
+    "mrp": 989,
+    "rating": 3.9,
+    "reviewCount": 9,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/1.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/2.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/3.webp"
+    ],
+    "thumbnail": "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/thumbnail.webp",
+    "specs": {
+      "Brand": "Vaseline",
+      "SKU": "SKI-VAS-VAS-120",
+      "Shipping weight": "4 kg",
+      "Dimensions": "21.83 × 17.38 × 24.76 cm",
+      "Warranty": "Lifetime warranty",
+      "Shipping": "Ships overnight",
+      "Return policy": "90 days return policy"
+    },
+    "stock": 95,
+    "tags": [
+      "personal care",
+      "body lotion"
+    ],
+    "reviews": [
+      {
+        "id": "120-g1",
+        "rating": 1,
+        "comment": "Quantity is small for the price.",
+        "reviewerName": "Karan Malhotra",
+        "date": "2026-11-15T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "120-g5",
+        "rating": 4,
+        "comment": "Exceeded my expectations. Texture is light and absorbs quickly. Gentle on sensitive skin, no irritation.",
+        "reviewerName": "Rohan Gupta",
+        "date": "2026-11-05T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "120-g3",
+        "rating": 4,
+        "comment": "Lovely fragrance that is not overpowering. But quantity is small for the price.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-10-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "120-g6",
+        "rating": 5,
+        "comment": "Texture is light and absorbs quickly. Gentle on sensitive skin, no irritation.",
+        "reviewerName": "Kavya Menon",
+        "date": "2026-09-11T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "120-g4",
+        "rating": 4,
+        "comment": "Good value for money at this price. Skin feels hydrated and soft all day.",
+        "reviewerName": "Rahul Verma",
+        "date": "2026-07-26T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "120-g2",
+        "rating": 4,
+        "comment": "Texture is light and absorbs quickly. Gentle on sensitive skin, no irritation.",
+        "reviewerName": "Pooja Desai",
+        "date": "2026-03-27T00:00:00.000Z",
+        "verified": true
+      },
+      {
+        "id": "120-r1",
+        "rating": 4,
+        "comment": "Excellent quality!",
+        "reviewerName": "Aria Ferguson",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "120-r2",
+        "rating": 5,
+        "comment": "Very pleased!",
+        "reviewerName": "Nova Cooper",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      },
+      {
+        "id": "120-r3",
+        "rating": 4,
+        "comment": "Great product!",
+        "reviewerName": "Madison Collins",
+        "date": "2025-04-30T09:41:02.054Z",
+        "verified": true
+      }
+    ]
+  }
+]

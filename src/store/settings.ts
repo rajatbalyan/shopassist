@@ -34,6 +34,8 @@ type SettingsState = {
   zoomHintSeen: boolean;
   /** The notification explainer was shown after a first add-to-cart (asked once). */
   notificationPromptSeen: boolean;
+  /** Last Expo push token sent to POST /devices (re-sent only when it changes). */
+  registeredPushToken: string | null;
 
   setName: (name: string) => void;
   setThemePreference: (pref: ThemePreference) => void;
@@ -47,6 +49,7 @@ type SettingsState = {
   setLastAddress: (address: Address) => void;
   setZoomHintSeen: () => void;
   setNotificationPromptSeen: () => void;
+  setRegisteredPushToken: (token: string | null) => void;
 };
 
 export const useSettingsStore = create<SettingsState>()(
@@ -63,6 +66,7 @@ export const useSettingsStore = create<SettingsState>()(
       lastAddress: null,
       zoomHintSeen: false,
       notificationPromptSeen: false,
+      registeredPushToken: null,
 
       setName: (name) => set({ name: name.trim() }),
       setThemePreference: (themePreference) => set({ themePreference }),
@@ -87,6 +91,7 @@ export const useSettingsStore = create<SettingsState>()(
       setLastAddress: (lastAddress) => set({ lastAddress }),
       setZoomHintSeen: () => set({ zoomHintSeen: true }),
       setNotificationPromptSeen: () => set({ notificationPromptSeen: true }),
+      setRegisteredPushToken: (registeredPushToken) => set({ registeredPushToken }),
     }),
     { name: 'settings', storage: persistStorage, version: 1 },
   ),

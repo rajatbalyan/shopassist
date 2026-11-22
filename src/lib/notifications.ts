@@ -6,13 +6,14 @@ import { router } from 'expo-router';
 import { useEffect } from 'react';
 import { AppState, Linking, Platform } from 'react-native';
 
-import { api } from '@/lib/api';
+import { api, isMockApi } from '@/lib/api';
 import { formatPrice, shortOrderId } from '@/lib/format';
 import * as haptics from '@/lib/haptics';
 import { deepLink, linkToHref } from '@/lib/links';
 import { queryClient, queryKeys } from '@/lib/queries';
 import { selectCartCount, useCartStore } from '@/store/cart';
 import { useSettingsStore } from '@/store/settings';
+import { waitForHydration } from '@/store/storage';
 import { useUiStore } from '@/store/ui';
 import type { Order, OrderStatus, Product } from '@/types';
 
@@ -151,6 +152,7 @@ export async function ensureNotificationPermission(context: PermissionContext): 
   const result = await Notifications.requestPermissionsAsync({
     ios: { allowAlert: true, allowBadge: true, allowSound: true },
   });
+  if (result.granted) void syncPushToken();
   return result.granted;
 }
 
@@ -273,6 +275,25 @@ export async function getPushToken(): Promise<string | null> {
   }
 }
 
+/**
+ * Registers this device's push token with the backend (POST /devices), only when it changed.
+ * Development/preview builds with the real API only; a no-op in Expo Go and mock mode.
+ */
+export async function syncPushToken(force = false) {
+  if (!supported || isExpoGo || isMockApi || !(await hasPermission())) return;
+  await waitForHydration(useSettingsStore);
+  const token = await getPushToken();
+  if (!token) return;
+  const settings = useSettingsStore.getState();
+  if (!force && token === settings.registeredPushToken) return;
+  try {
+    await api.registerDevice(settings.deviceId, token);
+    settings.setRegisteredPushToken(token);
+  } catch (e) {
+    console.warn('[notifications] Could not register the push token', e);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Responses (taps and action buttons) and app-wide wiring
 // ---------------------------------------------------------------------------
@@ -300,7 +321,7 @@ async function handleResponse(response: Notifications.NotificationResponse) {
       if (!data.productId) break;
       try {
         const id = data.productId;
-        const product = await queryClient.fetchQuery({ queryKey: queryKeys.product(id), queryFn: () => api.getProduct(id) });
+        const product = await queryClient.fetchQuery({ queryKey: queryKeys.product(id), queryFn: () => api.getProduct(id), staleTime: 0 });
         useCartStore.getState().add(product);
         haptics.success();
         router.navigate('/cart');
@@ -323,6 +344,9 @@ export function useNotifications() {
   useEffect(() => {
     if (!supported) return;
     void setupNotifications();
+    // Push token → backend on start (if already allowed), and again if it rotates.
+    void syncPushToken();
+    const tokenSub = Notifications.addPushTokenListener(() => void syncPushToken(true));
 
     // Cold start: the response that launched the app.
     const last = Notifications.getLastNotificationResponse();
@@ -348,6 +372,7 @@ export function useNotifications() {
 
     return () => {
       responseSub.remove();
+      tokenSub.remove();
       appStateSub.remove();
       cartUnsub();
     };

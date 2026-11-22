@@ -2,6 +2,7 @@ import categoriesData from '@/data/categories.json';
 import productsData from '@/data/products.json';
 import { getPriceBreakdown } from '@/lib/pricing';
 import { useOrdersStore } from '@/store/orders';
+import { useSettingsStore } from '@/store/settings';
 import { waitForHydration } from '@/store/storage';
 import type {
   AlertType,
@@ -31,6 +32,7 @@ export interface Api {
   ask(productId: string, question: string, history: ChatMessage[]): Promise<AskResponse>;
   registerDevice(deviceId: string, pushToken: string): Promise<void>;
   createAlert(deviceId: string, productId: string, type: AlertType): Promise<void>;
+  deleteAlert(deviceId: string, productId: string, type: AlertType): Promise<void>;
   createOrder(input: CreateOrderInput): Promise<Order>;
   getOrders(deviceId: string): Promise<Order[]>;
   getOrder(id: string): Promise<Order>;
@@ -59,21 +61,65 @@ function toQueryString(params: Record<string, string | number | boolean | undefi
   return '?' + entries.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(String(v))}`).join('&');
 }
 
+const REQUEST_TIMEOUT_MS = 10_000;
+
+/** Pulls `{ error }` out of a JSON error body, else returns the raw text. */
+function errorMessage(text: string, status: number) {
+  try {
+    const body = JSON.parse(text) as { error?: unknown };
+    if (typeof body.error === 'string') return body.error;
+  } catch {
+    // Not JSON.
+  }
+  return text || `Request failed (${status})`;
+}
+
 function createHttpApi(baseUrl: string): Api {
   const base = baseUrl.replace(/\/+$/, '');
 
-  async function request<T>(path: string, init?: { method?: string; body?: unknown }): Promise<T> {
-    const res = await fetch(base + path, {
-      method: init?.method ?? 'GET',
-      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-      body: init?.body === undefined ? undefined : JSON.stringify(init.body),
-    });
-    if (!res.ok) {
-      const text = await res.text().catch(() => '');
-      throw new ApiError(text || `Request failed (${res.status})`, res.status);
+  async function send(path: string, method: string, body: unknown): Promise<Response> {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+    try {
+      return await fetch(base + path, {
+        method,
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          // Lets the server rate-limit AI routes per device rather than per shared IP.
+          'x-device-id': useSettingsStore.getState().deviceId,
+        },
+        body: body === undefined ? undefined : JSON.stringify(body),
+        signal: controller.signal,
+      });
+    } catch (e) {
+      const timedOut = e instanceof Error && e.name === 'AbortError';
+      throw new ApiError(timedOut ? 'The request timed out' : 'Network request failed', 0);
+    } finally {
+      clearTimeout(timer);
     }
-    if (res.status === 204) return undefined as T;
-    return (await res.json()) as T;
+  }
+
+  async function request<T>(path: string, init?: { method?: string; body?: unknown }): Promise<T> {
+    const method = init?.method ?? 'GET';
+    // GETs are safe to repeat: one retry on network errors, timeouts and 5xx.
+    const attempts = method === 'GET' ? 2 : 1;
+    let error = new ApiError('Request failed', 0);
+    for (let attempt = 0; attempt < attempts; attempt++) {
+      try {
+        const res = await send(path, method, init?.body);
+        if (!res.ok) {
+          const text = await res.text().catch(() => '');
+          throw new ApiError(errorMessage(text, res.status), res.status);
+        }
+        if (res.status === 204) return undefined as T;
+        return (await res.json()) as T;
+      } catch (e) {
+        error = e instanceof ApiError ? e : new ApiError(String(e), 0);
+        if (error.status !== 0 && error.status < 500) break;
+      }
+    }
+    throw error;
   }
 
   return {
@@ -89,6 +135,8 @@ function createHttpApi(baseUrl: string): Api {
       request('/devices', { method: 'POST', body: { deviceId, pushToken } }),
     createAlert: (deviceId, productId, type) =>
       request('/alerts', { method: 'POST', body: { deviceId, productId, type } }),
+    deleteAlert: (deviceId, productId, type) =>
+      request('/alerts', { method: 'DELETE', body: { deviceId, productId, type } }),
     createOrder: (input) => request('/orders', { method: 'POST', body: input }),
     getOrders: (deviceId) => request(`/orders${toQueryString({ deviceId })}`),
     getOrder: (id) => request(`/orders/${encodeURIComponent(id)}`),
@@ -395,6 +443,9 @@ export const mockApi: Api = {
     await delay();
   },
   async createAlert() {
+    await delay();
+  },
+  async deleteAlert() {
     await delay();
   },
   async createOrder(input) {
