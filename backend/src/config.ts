@@ -1,13 +1,13 @@
 /** Gemini model used for every AI route. Change it here (or with GEMINI_MODEL). */
-export const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
+export const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 
 export const config = {
   port: Number(process.env.PORT) || 8080,
   projectId: process.env.GCP_PROJECT_ID || process.env.GOOGLE_CLOUD_PROJECT || '',
   /** Named Firestore database (not "(default)"). */
   firestoreDatabaseId: process.env.FIRESTORE_DATABASE_ID || 'shopassist',
-  /** Vertex AI location for Gemini. Cloud Run and Firestore run in asia-south1. */
-  location: process.env.GCP_LOCATION || 'us-central1',
+  /** Vertex AI location for Gemini ("global" endpoint). Cloud Run and Firestore run in asia-south1. */
+  location: process.env.GCP_LOCATION || 'global',
   model: GEMINI_MODEL,
   adminKey: process.env.ADMIN_KEY || '',
   store: (process.env.STORE === 'memory' ? 'memory' : 'firestore') as 'memory' | 'firestore',

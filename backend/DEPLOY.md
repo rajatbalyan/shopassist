@@ -9,8 +9,8 @@ Build method: the **Dockerfile** in `backend/`. `gcloud run deploy --source back
 ```powershell
 $PROJECT_ID = "your-project-id"      # e.g. rajat-workspace-509709
 $REGION     = "asia-south1"          # Cloud Run + Firestore (Mumbai)
-$AI_REGION  = "us-central1"          # Vertex AI location for Gemini (see step 3b)
-$MODEL      = "gemini-3.8-flash"     # also the default in backend/src/config.ts
+$AI_REGION  = "global"               # Vertex AI location for Gemini (see step 3b)
+$MODEL      = "gemini-3.5-flash-lite" # also the default in backend/src/config.ts (3.8 Flash is blocked for new projects)
 $DATABASE   = "shopassist"           # named Firestore database (not "(default)")
 $SERVICE    = "shopassist-api"
 $SA_NAME    = "shopassist-api"
@@ -47,18 +47,21 @@ gcloud firestore databases create --database=$DATABASE --location=$REGION --type
 Collections are created on first write: `orders`, `devices`, `alerts`, `priceOverrides`, `insights`.
 No composite indexes are needed.
 
-### 3b. Check Gemini is available in asia-south1 (optional)
+### 3b. Check the Gemini model responds (optional)
 
-The model runs in `us-central1` by default. To keep AI processing in India, test Mumbai:
+The model is called through the Vertex AI **global** endpoint (`GCP_LOCATION=global`). The global
+endpoint has no region prefix in its host. Google picks the serving region, so AI requests
+aren't pinned to India. Quick check before deploying:
 
 ```powershell
 $token = gcloud auth print-access-token
 $body = '{"contents":[{"role":"user","parts":[{"text":"Reply with OK"}]}]}'
 Invoke-RestMethod -Method Post -ContentType "application/json" -Headers @{ Authorization = "Bearer $token" } -Body $body `
-  -Uri "https://asia-south1-aiplatform.googleapis.com/v1/projects/$PROJECT_ID/locations/asia-south1/publishers/google/models/${MODEL}:generateContent"
+  -Uri "https://aiplatform.googleapis.com/v1/projects/$PROJECT_ID/locations/global/publishers/google/models/${MODEL}:generateContent"
 ```
 
-If that returns a candidate (not a 404), set `$AI_REGION = "asia-south1"` before deploying.
+A response with a candidate means the model is enabled for the project. A 404 or 403 means the model isn't
+available to this project. Change `$MODEL` and the `GEMINI_MODEL` default together.
 
 ## 4. ADMIN_KEY secret
 
