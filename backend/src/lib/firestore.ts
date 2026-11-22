@@ -110,7 +110,11 @@ export function createMemoryStore(): Store {
 const OVERRIDES_TTL_MS = 30_000;
 
 export function createFirestoreStore(): Store {
-  const db = new Firestore({ projectId: config.projectId || undefined, ignoreUndefinedProperties: true });
+  const db = new Firestore({
+    projectId: config.projectId || undefined,
+    databaseId: config.firestoreDatabaseId,
+    ignoreUndefinedProperties: true,
+  });
   const ordersCol = db.collection('orders');
   const devicesCol = db.collection('devices');
   const alertsCol = db.collection('alerts');

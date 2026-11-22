@@ -11,6 +11,7 @@ $PROJECT_ID = "your-project-id"      # e.g. rajat-workspace-509709
 $REGION     = "asia-south1"          # Cloud Run + Firestore (Mumbai)
 $AI_REGION  = "us-central1"          # Vertex AI location for Gemini (see step 3b)
 $MODEL      = "gemini-3.8-flash"     # also the default in backend/src/config.ts
+$DATABASE   = "shopassist"           # named Firestore database (not "(default)")
 $SERVICE    = "shopassist-api"
 $SA_NAME    = "shopassist-api"
 $SA         = "$SA_NAME@$PROJECT_ID.iam.gserviceaccount.com"
@@ -36,8 +37,11 @@ gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregi
 
 ## 3. Firestore (Native mode) in asia-south1
 
+The API uses a **named** database, `shopassist` (set by `FIRESTORE_DATABASE_ID`). Skip this if it already exists
+(`gcloud firestore databases list`).
+
 ```powershell
-gcloud firestore databases create --location=$REGION --type=firestore-native
+gcloud firestore databases create --database=$DATABASE --location=$REGION --type=firestore-native
 ```
 
 Collections are created on first write: `orders`, `devices`, `alerts`, `priceOverrides`, `insights`.
@@ -85,7 +89,7 @@ gcloud run deploy $SERVICE `
   --source backend `
   --region $REGION `
   --service-account $SA `
-  --set-env-vars "GCP_PROJECT_ID=$PROJECT_ID,GCP_LOCATION=$AI_REGION,GEMINI_MODEL=$MODEL,STORE=firestore" `
+  --set-env-vars "GCP_PROJECT_ID=$PROJECT_ID,GCP_LOCATION=$AI_REGION,GEMINI_MODEL=$MODEL,STORE=firestore,FIRESTORE_DATABASE_ID=$DATABASE" `
   --set-secrets "ADMIN_KEY=admin-key:latest" `
   --allow-unauthenticated `
   --min-instances 0 `

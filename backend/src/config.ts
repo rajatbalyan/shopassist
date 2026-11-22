@@ -4,6 +4,8 @@ export const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 export const config = {
   port: Number(process.env.PORT) || 8080,
   projectId: process.env.GCP_PROJECT_ID || process.env.GOOGLE_CLOUD_PROJECT || '',
+  /** Named Firestore database (not "(default)"). */
+  firestoreDatabaseId: process.env.FIRESTORE_DATABASE_ID || 'shopassist',
   /** Vertex AI location for Gemini. Cloud Run and Firestore run in asia-south1. */
   location: process.env.GCP_LOCATION || 'us-central1',
   model: GEMINI_MODEL,
