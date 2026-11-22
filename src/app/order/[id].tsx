@@ -26,6 +26,9 @@ import { useDemoSetOrderStatus, useOrder } from '@/lib/queries';
 import { useOrdersStore } from '@/store/orders';
 import type { Order, OrderItem, OrderStatus } from '@/types';
 
+// Friendly "Something went wrong · Try again" screen instead of a red crash.
+export { ErrorFallback as ErrorBoundary } from '@/components/error-fallback';
+
 const STEPS: OrderStatus[] = ['placed', 'shipped', 'delivered'];
 
 export default function OrderScreen() {

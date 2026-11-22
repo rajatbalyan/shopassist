@@ -4,6 +4,9 @@ import { useMemo } from 'react';
 import { useTheme } from '@/hooks/use-theme';
 import { useCartCount } from '@/store/cart';
 
+// Friendly "Something went wrong · Try again" screen instead of a red crash.
+export { ErrorFallback as ErrorBoundary } from '@/components/error-fallback';
+
 // Static icon configs live at module scope so NativeTabs never sees new objects for them.
 const ICONS = {
   home: { sf: { default: 'house', selected: 'house.fill' }, md: 'home' },

@@ -16,6 +16,9 @@ import { useCartStore } from '@/store/cart';
 import { useWishlistStore } from '@/store/wishlist';
 import type { Product } from '@/types';
 
+// Friendly "Something went wrong · Try again" screen instead of a red crash.
+export { ErrorFallback as ErrorBoundary } from '@/components/error-fallback';
+
 export default function WishlistScreen() {
   const { colors } = useTheme();
   const ids = useWishlistStore((s) => s.ids);

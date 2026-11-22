@@ -10,6 +10,9 @@ import { useTheme } from '@/hooks/use-theme';
 import { useNotifications } from '@/lib/notifications';
 import { queryClient } from '@/lib/queries';
 
+// Friendly "Something went wrong · Try again" screen instead of a red crash.
+export { ErrorFallback as ErrorBoundary } from '@/components/error-fallback';
+
 // Deep links (e.g. shopassist://product/1 from a cold start) open on top of the tabs,
 // so Back always lands somewhere sensible.
 export const unstable_settings = { anchor: '(tabs)' };

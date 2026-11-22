@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { useShallow } from 'zustand/react/shallow';
@@ -96,7 +97,7 @@ export const useCartStore = create<CartState>()(
 
 export const selectCartCount = (s: CartState) => s.items.reduce((n, i) => n + i.qty, 0);
 
-export const selectCartLines = (s: CartState): CartLine[] =>
+export const selectCartLines = (s: Pick<CartState, 'items' | 'products'>): CartLine[] =>
   s.items.flatMap((i) => {
     const product = s.products[i.productId];
     return product ? [{ ...i, product }] : [];
@@ -104,5 +105,13 @@ export const selectCartLines = (s: CartState): CartLine[] =>
 
 export const useCartCount = () => useCartStore(selectCartCount);
 
-/** Cart items joined with their product data. */
-export const useCartLines = () => useCartStore(useShallow(selectCartLines));
+/**
+ * Cart items joined with their product data.
+ * The selector returns the two stored references (stable between renders) and the join
+ * happens in useMemo. Joining inside the selector would build new line objects on every
+ * snapshot, which useShallow can't dedupe, so React would see a changing snapshot and loop.
+ */
+export function useCartLines(): CartLine[] {
+  const { items, products } = useCartStore(useShallow((s) => ({ items: s.items, products: s.products })));
+  return useMemo(() => selectCartLines({ items, products }), [items, products]);
+}

@@ -14,6 +14,9 @@ import { sortLabel } from '@/lib/filters';
 import { useCategories, useProductGrid } from '@/lib/queries';
 import type { ProductSort } from '@/types';
 
+// Friendly "Something went wrong · Try again" screen instead of a red crash.
+export { ErrorFallback as ErrorBoundary } from '@/components/error-fallback';
+
 export default function CategoryScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const { colors } = useTheme();

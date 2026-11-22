@@ -24,6 +24,9 @@ import { useCartLines, useCartStore } from '@/store/cart';
 import { useSettingsStore } from '@/store/settings';
 import type { Address } from '@/types';
 
+// Friendly "Something went wrong · Try again" screen instead of a red crash.
+export { ErrorFallback as ErrorBoundary } from '@/components/error-fallback';
+
 type Field = keyof Address;
 
 const EMPTY: Address = { name: '', phone: '', line1: '', city: '', pincode: '' };

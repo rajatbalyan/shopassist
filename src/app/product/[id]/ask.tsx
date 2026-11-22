@@ -21,6 +21,9 @@ import * as haptics from '@/lib/haptics';
 import { useProduct } from '@/lib/queries';
 import type { ChatMessage, Product, Review } from '@/types';
 
+// Friendly "Something went wrong · Try again" screen instead of a red crash.
+export { ErrorFallback as ErrorBoundary } from '@/components/error-fallback';
+
 const SUGGESTIONS: Record<string, string[]> = {
   smartphones: ['How is the battery?', 'Is it good for gaming?', 'What do buyers complain about?'],
   laptops: ['How is the battery life?', 'Is it good for work?', 'What do buyers complain about?'],

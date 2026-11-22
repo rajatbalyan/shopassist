@@ -37,6 +37,9 @@ import { useSettingsStore } from '@/store/settings';
 import { useIsWishlisted, useWishlistStore } from '@/store/wishlist';
 import type { AlertType, Insight, Product, Review } from '@/types';
 
+// Friendly "Something went wrong · Try again" screen instead of a red crash.
+export { ErrorFallback as ErrorBoundary } from '@/components/error-fallback';
+
 const INITIAL_REVIEWS = 5;
 const LOW_STOCK = 5;
 
@@ -121,13 +124,15 @@ function ProductDetails({ product }: { product: Product }) {
   const onAlert = (type: AlertType) => {
     const on = toggleAlert(product.id, type);
     haptics.tap();
-    if (on) {
-      void api.createAlert(deviceId, product.id, type).catch(() => {});
-      // Alerts are delivered as notifications, so this is the moment to ask.
-      void ensureNotificationPermission('alert');
-    } else {
-      void api.deleteAlert(deviceId, product.id, type).catch(() => {});
-    }
+    // Optimistic toggle; if the server didn't save it (e.g. offline), undo it and say so,
+    // otherwise the switch would promise an alert that can never arrive.
+    const save = on ? api.createAlert(deviceId, product.id, type) : api.deleteAlert(deviceId, product.id, type);
+    save.catch(() => {
+      if (useAlertsStore.getState().isOn(product.id, type) === on) useAlertsStore.getState().toggle(product.id, type);
+      show('Couldn’t update the alert. Check your connection and try again.');
+    });
+    // Alerts are delivered as notifications, so this is the moment to ask.
+    if (on) void ensureNotificationPermission('alert');
     show(
       type === 'price_drop'
         ? on

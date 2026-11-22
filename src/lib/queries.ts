@@ -1,4 +1,14 @@
-import { QueryClient, useInfiniteQuery, useMutation, useQueries, useQuery } from '@tanstack/react-query';
+import NetInfo from '@react-native-community/netinfo';
+import {
+  focusManager,
+  onlineManager,
+  QueryClient,
+  useInfiniteQuery,
+  useMutation,
+  useQueries,
+  useQuery,
+} from '@tanstack/react-query';
+import { AppState, Platform } from 'react-native';
 
 import { api, ApiError, DEFAULT_PAGE_SIZE, mockSetOrderStatus } from '@/lib/api';
 import { useSettingsStore } from '@/store/settings';
@@ -6,14 +16,31 @@ import type { CreateOrderInput, Order, OrderStatus, Product, ProductQuery } from
 
 const MINUTE = 60_000;
 
+// React Native has no browser online/focus events: feed them from NetInfo and AppState so
+// queries refetch when the connection comes back and when the app returns to the foreground.
+if (Platform.OS !== 'web') {
+  onlineManager.setEventListener((setOnline) =>
+    NetInfo.addEventListener((state) => setOnline(state.isConnected !== false)),
+  );
+  focusManager.setEventListener((setFocused) => {
+    const sub = AppState.addEventListener('change', (s) => setFocused(s === 'active'));
+    return () => sub.remove();
+  });
+}
+
 export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: MINUTE,
-      // Don't retry "not found" — it won't fix itself.
+      // Fail fast and show the error state (with Try again) instead of pausing silently
+      // while offline. Reconnecting still refetches, via onlineManager above.
+      networkMode: 'always',
+      // api.ts already retries GETs once; one more round here. Never retry "not found".
       retry: (failureCount, error) =>
-        !(error instanceof ApiError && error.status === 404) && failureCount < 2,
+        !(error instanceof ApiError && error.status >= 400 && error.status < 500) && failureCount < 1,
     },
+    // Mutations (place order, alerts) fail visibly offline instead of queueing forever.
+    mutations: { networkMode: 'always' },
   },
 });
 
