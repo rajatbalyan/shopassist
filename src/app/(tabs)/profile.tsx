@@ -1,12 +1,21 @@
+import Constants from 'expo-constants';
 import { router } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
+import { useState, type ReactNode } from 'react';
+import { ScrollView, StyleSheet, Switch, TextInput, View } from 'react-native';
 
-import { Button } from '@/components/button';
-import { Chip } from '@/components/chip';
-import { PlaceholderScreen } from '@/components/placeholder-screen';
+import { Card } from '@/components/card';
+import { IconButton } from '@/components/icon-button';
+import { ListRow } from '@/components/list-row';
+import { Screen } from '@/components/screen';
+import { SegmentedControl } from '@/components/segmented-control';
 import { ThemedText } from '@/components/themed-text';
-import { Spacing } from '@/constants/theme';
+import { Radius, Spacing, TouchTarget, Typography } from '@/constants/theme';
+import { useTheme } from '@/hooks/use-theme';
+import { isMockApi } from '@/lib/api';
+import * as haptics from '@/lib/haptics';
+import { useOrders } from '@/lib/queries';
 import { useSettingsStore, type ThemePreference } from '@/store/settings';
+import { useWishlistStore } from '@/store/wishlist';
 
 const THEMES: { value: ThemePreference; label: string }[] = [
   { value: 'system', label: 'System' },
@@ -14,32 +23,159 @@ const THEMES: { value: ThemePreference; label: string }[] = [
   { value: 'dark', label: 'Dark' },
 ];
 
-// Placeholder Profile: links to every stack route so navigation can be tested end to end.
 export default function ProfileScreen() {
+  const { colors } = useTheme();
+  const name = useSettingsStore((s) => s.name);
+  const setName = useSettingsStore((s) => s.setName);
   const themePreference = useSettingsStore((s) => s.themePreference);
   const setThemePreference = useSettingsStore((s) => s.setThemePreference);
+  const demoMode = useSettingsStore((s) => s.demoMode);
+  const setDemoMode = useSettingsStore((s) => s.setDemoMode);
+  const wishlistCount = useWishlistStore((s) => s.ids.length);
+  const { data: orders } = useOrders();
+
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState(name);
+
+  const saveName = () => {
+    setName(draft);
+    setEditing(false);
+    haptics.success();
+  };
+
+  const initial = name.trim().charAt(0).toUpperCase();
 
   return (
-    <PlaceholderScreen title="Profile">
-      <ThemedText variant="subheading">Theme</ThemedText>
-      <View style={styles.row}>
-        {THEMES.map((t) => (
-          <Chip
-            key={t.value}
-            label={t.label}
-            selected={themePreference === t.value}
-            onPress={() => setThemePreference(t.value)}
+    <Screen>
+      <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled">
+        <ThemedText variant="title" accessibilityRole="header">
+          Profile
+        </ThemedText>
+
+        <Card style={styles.identity}>
+          <View style={[styles.avatar, { backgroundColor: colors.primary }]} accessible={false}>
+            <ThemedText variant="title" style={{ color: colors.primaryText }}>
+              {initial || '🙂'}
+            </ThemedText>
+          </View>
+          <View style={styles.flex}>
+            {editing ? (
+              <TextInput
+                value={draft}
+                onChangeText={setDraft}
+                onSubmitEditing={saveName}
+                onBlur={saveName}
+                autoFocus
+                maxLength={30}
+                returnKeyType="done"
+                placeholder="Your name"
+                placeholderTextColor={colors.textSecondary}
+                accessibilityLabel="Your name"
+                style={[Typography.heading, styles.nameInput, { color: colors.text, borderColor: colors.primary }]}
+              />
+            ) : (
+              <>
+                <ThemedText variant="heading" numberOfLines={1}>
+                  {name || 'Add your name'}
+                </ThemedText>
+                <ThemedText variant="caption" color="textSecondary">
+                  Used to greet you on Home
+                </ThemedText>
+              </>
+            )}
+          </View>
+          <IconButton
+            icon={editing ? { ios: 'checkmark', android: 'check' } : { ios: 'pencil', android: 'edit' }}
+            accessibilityLabel={editing ? 'Save name' : 'Edit name'}
+            onPress={() => {
+              if (editing) saveName();
+              else {
+                setDraft(name);
+                setEditing(true);
+              }
+            }}
           />
-        ))}
-      </View>
-      <Button title="Wishlist" variant="ghost" onPress={() => router.push('/wishlist')} />
-      <Button title="Notification settings" variant="ghost" onPress={() => router.push('/notifications')} />
-      <Button title="Checkout" variant="ghost" onPress={() => router.push('/checkout')} />
-      <Button title="Onboarding" variant="ghost" onPress={() => router.push('/onboarding')} />
-    </PlaceholderScreen>
+        </Card>
+
+        <Group title="Shopping">
+          <ListRow
+            icon={{ ios: 'heart', android: 'favorite_border' }}
+            label="Wishlist"
+            value={String(wishlistCount)}
+            onPress={() => router.push('/wishlist')}
+          />
+          <ListRow
+            icon={{ ios: 'shippingbox', android: 'receipt_long' }}
+            label="Orders"
+            value={orders ? String(orders.length) : undefined}
+            onPress={() => router.navigate('/orders')}
+          />
+          <ListRow
+            icon={{ ios: 'bell', android: 'notifications' }}
+            label="Notification settings"
+            onPress={() => router.push('/notifications')}
+          />
+        </Group>
+
+        <Group title="Appearance">
+          <View style={styles.padded}>
+            <SegmentedControl
+              accessibilityLabel="Theme"
+              options={THEMES}
+              value={themePreference}
+              onChange={setThemePreference}
+            />
+          </View>
+        </Group>
+
+        <Group title="Demo">
+          <ListRow
+            icon={{ ios: 'timer', android: 'timer' }}
+            label="Demo mode"
+            caption="Shortens timers so features can be shown live, e.g. the cart reminder fires after 10 seconds instead of 2 hours."
+            right={
+              <Switch
+                value={demoMode}
+                onValueChange={setDemoMode}
+                trackColor={{ true: colors.primary, false: colors.border }}
+                thumbColor={colors.surface}
+                accessibilityLabel="Demo mode"
+              />
+            }
+          />
+        </Group>
+
+        <Group title="About">
+          <ListRow label="Version" value={Constants.expoConfig?.version ?? '1.0.0'} />
+          <ListRow label="Built with" value="Expo + React Native" />
+          <ListRow label="Product data" value="DummyJSON demo data" />
+          <ListRow label="Data source" value={isMockApi ? 'Local mock' : 'Cloud API'} />
+        </Group>
+      </ScrollView>
+    </Screen>
+  );
+}
+
+function Group({ title, children }: { title: string; children: ReactNode }) {
+  const { colors } = useTheme();
+  return (
+    <View style={styles.group}>
+      <ThemedText variant="caption" color="textSecondary" style={styles.groupTitle} accessibilityRole="header">
+        {title.toUpperCase()}
+      </ThemedText>
+      <View style={[styles.groupBody, { backgroundColor: colors.surface, borderColor: colors.border }]}>{children}</View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  row: { flexDirection: 'row', gap: Spacing.sm },
+  flex: { flex: 1 },
+  scroll: { padding: Spacing.lg, gap: Spacing.xl, paddingBottom: Spacing.xxxl },
+  identity: { flexDirection: 'row', alignItems: 'center' },
+  avatar: { width: 60, height: 60, borderRadius: 30, alignItems: 'center', justifyContent: 'center' },
+  nameInput: { borderBottomWidth: 2, paddingVertical: Spacing.xs, minHeight: TouchTarget },
+  group: { gap: Spacing.sm },
+  groupTitle: { fontWeight: '700', letterSpacing: 0.8, paddingHorizontal: Spacing.xs },
+  groupBody: { borderRadius: Radius.lg, borderWidth: StyleSheet.hairlineWidth, overflow: 'hidden' },
+  padded: { padding: Spacing.md },
 });

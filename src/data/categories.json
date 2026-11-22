@@ -2,36 +2,57 @@
   {
     "slug": "smartphones",
     "name": "Smartphones",
-    "count": 12
+    "count": 12,
+    "avgDiscount": 14,
+    "maxDiscount": 20,
+    "image": "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
   },
   {
     "slug": "laptops",
     "name": "Laptops",
-    "count": 5
+    "count": 5,
+    "avgDiscount": 9,
+    "maxDiscount": 12,
+    "image": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp"
   },
   {
     "slug": "mens-shirts",
     "name": "Men's Shirts",
-    "count": 5
+    "count": 5,
+    "avgDiscount": 13,
+    "maxDiscount": 21,
+    "image": "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp"
   },
   {
     "slug": "womens-bags",
     "name": "Women's Bags",
-    "count": 5
+    "count": 5,
+    "avgDiscount": 13,
+    "maxDiscount": 19,
+    "image": "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/thumbnail.webp"
   },
   {
     "slug": "kitchen-accessories",
     "name": "Kitchen",
-    "count": 13
+    "count": 13,
+    "avgDiscount": 9,
+    "maxDiscount": 16,
+    "image": "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp"
   },
   {
     "slug": "beauty",
     "name": "Beauty",
-    "count": 5
+    "count": 5,
+    "avgDiscount": 14,
+    "maxDiscount": 19,
+    "image": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
   },
   {
     "slug": "skin-care",
     "name": "Skin Care",
-    "count": 3
+    "count": 3,
+    "avgDiscount": 18,
+    "maxDiscount": 21,
+    "image": "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/thumbnail.webp"
   }
 ]

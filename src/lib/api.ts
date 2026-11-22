@@ -12,6 +12,7 @@ import type {
   CreateOrderInput,
   Insight,
   Order,
+  OrderStatus,
   Paginated,
   ParsedSearch,
   Product,
@@ -52,7 +53,7 @@ export const DEFAULT_PAGE_SIZE = 10;
 // HTTP implementation (Prompt 4 backend)
 // ---------------------------------------------------------------------------
 
-function toQueryString(params: Record<string, string | number | undefined>): string {
+function toQueryString(params: Record<string, string | number | boolean | undefined>): string {
   const entries = Object.entries(params).filter(([, v]) => v !== undefined && v !== '');
   if (entries.length === 0) return '';
   return '?' + entries.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(String(v))}`).join('&');
@@ -138,14 +139,17 @@ function queryProducts(q: ProductQuery): Paginated<Product> {
   const page = Math.max(1, q.page ?? 1);
   const limit = Math.max(1, q.limit ?? DEFAULT_PAGE_SIZE);
   const tokens = q.search ? tokenize(q.search) : [];
+  // `category` may hold several comma-separated slugs (multi-select filter).
+  const categories = q.category ? q.category.split(',').filter(Boolean) : [];
 
   let results = PRODUCTS.map((p) => ({ p, score: tokens.length ? searchScore(p, tokens) : 1 })).filter(
     ({ p, score }) =>
       score > 0 &&
-      (!q.category || p.category === q.category) &&
+      (categories.length === 0 || categories.includes(p.category)) &&
       (q.minPrice === undefined || p.price >= q.minPrice) &&
       (q.maxPrice === undefined || p.price <= q.maxPrice) &&
-      (q.minRating === undefined || p.rating >= q.minRating),
+      (q.minRating === undefined || p.rating >= q.minRating) &&
+      (!q.sponsored || !!p.sponsored),
   );
 
   switch (q.sort) {
@@ -397,6 +401,7 @@ export const mockApi: Api = {
     await delay();
     if (input.items.length === 0) throw new ApiError('Order has no items', 400);
     const { subtotal, delivery, total } = getPriceBreakdown(input.items);
+    const now = new Date().toISOString();
     const order: Order = {
       id: `SA${Date.now().toString(36).toUpperCase()}`,
       items: input.items,
@@ -405,7 +410,8 @@ export const mockApi: Api = {
       total,
       address: input.address,
       status: 'placed',
-      createdAt: new Date().toISOString(),
+      createdAt: now,
+      history: [{ status: 'placed', at: now }],
     };
     await waitForHydration(useOrdersStore);
     useOrdersStore.getState().addOrder(order);
@@ -424,6 +430,17 @@ export const mockApi: Api = {
     return order;
   },
 };
+
+/**
+ * Demo-only: move a locally stored order to a new status so the timeline can be shown
+ * before the backend exists. The real backend does this via /admin/orders/:id/ship.
+ */
+export async function mockSetOrderStatus(id: string, status: OrderStatus): Promise<Order> {
+  await waitForHydration(useOrdersStore);
+  const order = useOrdersStore.getState().setStatus(id, status);
+  if (!order) throw new ApiError('Order not found', 404);
+  return order;
+}
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL;
 

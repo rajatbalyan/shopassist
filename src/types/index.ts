@@ -28,7 +28,15 @@ export type Product = {
   reviews: Review[];
 };
 
-export type Category = { slug: string; name: string; count: number };
+export type Category = {
+  slug: string;
+  name: string;
+  count: number;
+  /** Average / best discount across the category, in percent. */
+  avgDiscount?: number;
+  maxDiscount?: number;
+  image?: string;
+};
 
 export type CartItem = { productId: string; qty: number; priceAtAdd: number };
 
@@ -36,7 +44,16 @@ export type OrderStatus = 'placed' | 'shipped' | 'delivered';
 
 export type Address = { name: string; phone: string; line1: string; city: string; pincode: string };
 
-export type OrderItem = { productId: string; title: string; qty: number; price: number };
+export type OrderItem = {
+  productId: string;
+  title: string;
+  qty: number;
+  price: number;
+  /** Optional so orders render with thumbnails without refetching products. */
+  thumbnail?: string;
+};
+
+export type OrderStatusEvent = { status: OrderStatus; at: string };
 
 export type Order = {
   id: string;
@@ -47,6 +64,8 @@ export type Order = {
   address: Address;
   status: OrderStatus;
   createdAt: string;
+  /** When each status was reached, oldest first. */
+  history?: OrderStatusEvent[];
 };
 
 export type ChatMessage = {
@@ -70,6 +89,8 @@ export type ProductQuery = {
   maxPrice?: number;
   minRating?: number;
   sort?: ProductSort;
+  /** Only sponsored listings (Home's clearly labelled Sponsored row). */
+  sponsored?: boolean;
   page?: number;
   limit?: number;
 };
@@ -83,7 +104,7 @@ export type Paginated<T> = {
 };
 
 /** Filters a natural-language query can produce (subset of ProductQuery). */
-export type SearchFilters = Omit<ProductQuery, 'page' | 'limit'>;
+export type SearchFilters = Omit<ProductQuery, 'page' | 'limit' | 'sponsored'>;
 
 export type ParsedSearch = { filters: SearchFilters; explanation: string };
 

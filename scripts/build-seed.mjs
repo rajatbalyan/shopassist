@@ -274,8 +274,17 @@ async function main() {
     }
     if (sourceSlug !== slug) console.warn(`Using ${sourceSlug} in place of ${slug}`);
     const picked = source.filter((p) => p.category === sourceSlug).slice(0, limit);
-    products.push(...picked.map((p) => mapProduct(p, slug, group)));
-    categories.push({ slug, name, count: picked.length });
+    const mapped = picked.map((p) => mapProduct(p, slug, group));
+    products.push(...mapped);
+    const discounts = mapped.map((p) => Math.round(((p.mrp - p.price) / p.mrp) * 100));
+    categories.push({
+      slug,
+      name,
+      count: mapped.length,
+      avgDiscount: Math.round(discounts.reduce((s, d) => s + d, 0) / discounts.length),
+      maxDiscount: Math.max(...discounts),
+      image: mapped[0].thumbnail,
+    });
   }
 
   // Sponsor the second product of the first N categories so they are spread out.

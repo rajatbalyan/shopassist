@@ -24,3 +24,8 @@ export function formatDate(iso: string): string {
   const date = new Date(iso);
   return Number.isNaN(date.getTime()) ? '' : dateFormatter.format(date);
 }
+
+/** Short, human-friendly order reference, e.g. "#K3F9ZQ". */
+export function shortOrderId(id: string): string {
+  return `#${id.slice(-6).toUpperCase()}`;
+}

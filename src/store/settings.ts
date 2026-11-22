@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import type { SearchFilters } from '@/types';
+import type { Address, SearchFilters } from '@/types';
 
 import { persistStorage, uuid } from './storage';
 
@@ -12,6 +12,8 @@ export type NotificationPrefs = {
   cartReminders: boolean;
   priceAlerts: boolean;
 };
+
+const MAX_RECENT_SEARCHES = 8;
 
 export type SavedFilter = { id: string; name: string; filters: SearchFilters };
 
@@ -25,6 +27,9 @@ type SettingsState = {
   deviceId: string;
   savedFilters: SavedFilter[];
   onboarded: boolean;
+  recentSearches: string[];
+  /** Prefills checkout. */
+  lastAddress: Address | null;
 
   setName: (name: string) => void;
   setThemePreference: (pref: ThemePreference) => void;
@@ -33,6 +38,9 @@ type SettingsState = {
   saveFilter: (name: string, filters: SearchFilters) => void;
   removeFilter: (id: string) => void;
   setOnboarded: (done: boolean) => void;
+  addRecentSearch: (query: string) => void;
+  clearRecentSearches: () => void;
+  setLastAddress: (address: Address) => void;
 };
 
 export const useSettingsStore = create<SettingsState>()(
@@ -45,6 +53,8 @@ export const useSettingsStore = create<SettingsState>()(
       deviceId: uuid(),
       savedFilters: [],
       onboarded: false,
+      recentSearches: [],
+      lastAddress: null,
 
       setName: (name) => set({ name: name.trim() }),
       setThemePreference: (themePreference) => set({ themePreference }),
@@ -55,6 +65,18 @@ export const useSettingsStore = create<SettingsState>()(
         set((s) => ({ savedFilters: [{ id: uuid(), name, filters }, ...s.savedFilters] })),
       removeFilter: (id) => set((s) => ({ savedFilters: s.savedFilters.filter((f) => f.id !== id) })),
       setOnboarded: (onboarded) => set({ onboarded }),
+      addRecentSearch: (query) => {
+        const q = query.trim();
+        if (!q) return;
+        set((s) => ({
+          recentSearches: [q, ...s.recentSearches.filter((r) => r.toLowerCase() !== q.toLowerCase())].slice(
+            0,
+            MAX_RECENT_SEARCHES,
+          ),
+        }));
+      },
+      clearRecentSearches: () => set({ recentSearches: [] }),
+      setLastAddress: (lastAddress) => set({ lastAddress }),
     }),
     { name: 'settings', storage: persistStorage, version: 1 },
   ),

@@ -1,8 +1,8 @@
-import { QueryClient, useInfiniteQuery, useQuery } from '@tanstack/react-query';
+import { QueryClient, useInfiniteQuery, useMutation, useQueries, useQuery } from '@tanstack/react-query';
 
-import { api, ApiError, DEFAULT_PAGE_SIZE } from '@/lib/api';
+import { api, ApiError, DEFAULT_PAGE_SIZE, mockSetOrderStatus } from '@/lib/api';
 import { useSettingsStore } from '@/store/settings';
-import type { ProductQuery } from '@/types';
+import type { CreateOrderInput, Order, OrderStatus, Product, ProductQuery } from '@/types';
 
 const MINUTE = 60_000;
 
@@ -37,6 +37,25 @@ export function useProducts(query: Omit<ProductQuery, 'page'> = {}) {
     getNextPageParam: (last) => (last.hasMore ? last.page + 1 : undefined),
     staleTime: 5 * MINUTE,
   });
+}
+
+/** useProducts flattened into the props ProductGrid expects. */
+export function useProductGrid(query: Omit<ProductQuery, 'page'> = {}) {
+  const result = useProducts(query);
+  const { data, isPending, isError, refetch, isRefetching, isFetchingNextPage, hasNextPage, fetchNextPage } = result;
+  return {
+    products: data?.pages.flatMap((p) => p.items) ?? [],
+    total: data?.pages[0]?.total,
+    isPending,
+    isError,
+    onRetry: () => void refetch(),
+    onRefresh: () => void refetch(),
+    refreshing: isRefetching && !isFetchingNextPage,
+    isFetchingNextPage,
+    onEndReached: () => {
+      if (hasNextPage && !isFetchingNextPage) void fetchNextPage();
+    },
+  };
 }
 
 export function useProduct(id: string | undefined) {
@@ -90,5 +109,42 @@ export function useOrder(id: string | undefined) {
     queryFn: () => api.getOrder(id!),
     enabled: !!id,
     staleTime: 30_000,
+  });
+}
+
+/** Several products by id (wishlist, cart suggestions). Shares the cache with useProduct. */
+export function useProductsByIds(ids: string[]) {
+  return useQueries({
+    queries: ids.map((id) => ({
+      queryKey: queryKeys.product(id),
+      queryFn: () => api.getProduct(id),
+      staleTime: 5 * MINUTE,
+    })),
+    combine: (results) => ({
+      products: results.flatMap((r) => (r.data ? [r.data] : [])) as Product[],
+      isPending: results.some((r) => r.isPending),
+      isError: results.length > 0 && results.every((r) => r.isError),
+      refetch: () => Promise.all(results.map((r) => r.refetch())),
+    }),
+  });
+}
+
+function cacheOrder(order: Order) {
+  queryClient.setQueryData(queryKeys.order(order.id), order);
+  queryClient.invalidateQueries({ queryKey: ['orders'] });
+}
+
+export function useCreateOrder() {
+  return useMutation({
+    mutationFn: (input: CreateOrderInput) => api.createOrder(input),
+    onSuccess: cacheOrder,
+  });
+}
+
+/** Mock mode only: advance an order's status for the demo timeline. */
+export function useDemoSetOrderStatus() {
+  return useMutation({
+    mutationFn: ({ id, status }: { id: string; status: OrderStatus }) => mockSetOrderStatus(id, status),
+    onSuccess: cacheOrder,
   });
 }

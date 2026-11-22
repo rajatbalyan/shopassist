@@ -41,7 +41,7 @@ export default function RootLayout() {
             }}>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="product/[id]" options={{ title: '' }} />
-            <Stack.Screen name="product/[id]/ask" options={{ presentation: 'modal', title: 'Ask AI' }} />
+            <Stack.Screen name="product/[id]/ask" options={{ presentation: 'modal', headerShown: false }} />
             <Stack.Screen name="category/[slug]" options={{ title: 'Category' }} />
             <Stack.Screen name="order/[id]" options={{ title: 'Order' }} />
             <Stack.Screen name="wishlist" options={{ title: 'Wishlist' }} />

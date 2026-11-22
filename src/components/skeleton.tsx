@@ -63,6 +63,6 @@ export function ProductCardSkeleton() {
 const styles = StyleSheet.create({
   base: { overflow: 'hidden' },
   highlight: { ...StyleSheet.absoluteFill, opacity: 0.7 },
-  card: { flex: 1, gap: Spacing.sm },
+  card: { gap: Spacing.sm },
   image: { aspectRatio: 1 },
 });
