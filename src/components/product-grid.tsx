@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode, Ref } from 'react';
-import { ActivityIndicator, FlatList, RefreshControl, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { ActivityIndicator, FlatList, Platform, RefreshControl, StyleSheet, useWindowDimensions, View } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 
 import { ErrorState } from '@/components/error-state';
@@ -68,6 +68,11 @@ export function ProductGrid({
       }
       onEndReached={onEndReached}
       onEndReachedThreshold={0.6}
+      // Card heights vary with title length, so no getItemLayout here; keep the window small instead.
+      initialNumToRender={6}
+      maxToRenderPerBatch={6}
+      windowSize={7}
+      removeClippedSubviews={Platform.OS === 'android'}
       keyboardDismissMode="on-drag"
       keyboardShouldPersistTaps="handled"
       refreshControl={

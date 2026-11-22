@@ -180,6 +180,6 @@ const styles = StyleSheet.create({
   flex: { flex: 1 },
   line: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
   dot: { width: 8, height: 8, borderRadius: 4 },
-  lineLabel: { width: 128 },
+  lineLabel: { width: 112 },
   actions: { flexDirection: 'row', gap: Spacing.sm, marginTop: Spacing.sm, flexWrap: 'wrap' },
 });

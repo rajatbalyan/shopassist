@@ -1,5 +1,6 @@
 import { Image } from 'expo-image';
 import { router } from 'expo-router';
+import { memo } from 'react';
 import { Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
 
@@ -23,7 +24,8 @@ type ProductCardProps = {
   style?: StyleProp<ViewStyle>;
 };
 
-export function ProductCard({ product, onPress, onLongPress, style }: ProductCardProps) {
+/** Memoized: grids re-render on every page load, but a card only changes with its own props. */
+export const ProductCard = memo(function ProductCard({ product, onPress, onLongPress, style }: ProductCardProps) {
   const { colors } = useTheme();
   const wishlisted = useIsWishlisted(product.id);
   const toggleWishlist = useWishlistStore((s) => s.toggle);
@@ -62,6 +64,7 @@ export function ProductCard({ product, onPress, onLongPress, style }: ProductCar
             contentFit="contain"
             transition={200}
             recyclingKey={product.id}
+            cachePolicy="memory-disk"
             accessibilityLabel={product.title}
           />
           {outOfStock && (
@@ -100,7 +103,7 @@ export function ProductCard({ product, onPress, onLongPress, style }: ProductCar
       </Animated.View>
     </Pressable>
   );
-}
+});
 
 const styles = StyleSheet.create({
   card: {

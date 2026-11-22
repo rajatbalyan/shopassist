@@ -187,7 +187,7 @@ function CartRow({ line, onQty, onRemove }: CartRowProps) {
           accessibilityRole="button"
           accessibilityLabel={`Open ${product.title}`}
           style={[styles.thumbWrap, { backgroundColor: colors.surfaceAlt }]}>
-          <Image source={product.thumbnail} style={styles.thumb} contentFit="contain" accessibilityLabel={product.title} />
+          <Image source={product.thumbnail} style={styles.thumb} contentFit="contain" accessible={false} />
         </Pressable>
         <View style={styles.rowBody}>
           <View style={styles.rowTop}>
@@ -207,7 +207,9 @@ function CartRow({ line, onQty, onRemove }: CartRowProps) {
           </ThemedText>
           <View style={styles.rowBottom}>
             <QuantityStepper value={qty} max={max} onChange={onQty} itemName={product.title} />
-            <ThemedText variant="price">{formatPrice(product.price * qty)}</ThemedText>
+            <ThemedText variant="price" accessibilityLabel={`Line total ${formatPrice(product.price * qty)}`}>
+              {formatPrice(product.price * qty)}
+            </ThemedText>
           </View>
         </View>
       </View>

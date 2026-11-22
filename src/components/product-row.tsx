@@ -34,6 +34,10 @@ export function ProductRow({ products, loading, onLongPressProduct }: ProductRow
       keyExtractor={(p) => p.id}
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.content}
+      // Fixed-width cards: lets the list skip measuring.
+      getItemLayout={(_, index) => ({ length: CARD_WIDTH, offset: Spacing.lg + (CARD_WIDTH + Spacing.md) * index, index })}
+      initialNumToRender={3}
+      windowSize={5}
       renderItem={({ item }) => (
         <ProductCard product={item} onLongPress={onLongPressProduct} style={{ width: CARD_WIDTH }} />
       )}
