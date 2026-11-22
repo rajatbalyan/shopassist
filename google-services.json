@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "140884308396",
+    "project_id": "rajat-experiments",
+    "storage_bucket": "rajat-experiments.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140884308396:android:3bd91f6136582a55cd0a09",
+        "android_client_info": {
+          "package_name": "com.rajatbalyan.shopassist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL7pB4gcKyGP2AGZi_pPbysVOlfu-8EGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

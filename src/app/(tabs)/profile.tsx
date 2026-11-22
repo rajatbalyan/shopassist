@@ -1,4 +1,5 @@
 import Constants from 'expo-constants';
+import * as Updates from 'expo-updates';
 import { router } from 'expo-router';
 import { useState, type ReactNode } from 'react';
 import { ScrollView, StyleSheet, Switch, TextInput, View } from 'react-native';
@@ -6,13 +7,14 @@ import { ScrollView, StyleSheet, Switch, TextInput, View } from 'react-native';
 import { Card } from '@/components/card';
 import { IconButton } from '@/components/icon-button';
 import { ListRow } from '@/components/list-row';
+import { PushDiagnostics } from '@/components/push-diagnostics';
 import { Screen } from '@/components/screen';
 import { SegmentedControl } from '@/components/segmented-control';
 import { useSnackbar } from '@/components/snackbar';
 import { ThemedText } from '@/components/themed-text';
 import { Radius, Spacing, TouchTarget, Typography } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
-import { isMockApi, mockDropPrice } from '@/lib/api';
+import { apiHost, isMockApi, mockDropPrice } from '@/lib/api';
 import * as haptics from '@/lib/haptics';
 import { ensureNotificationPermission, schedulePriceDropDemo } from '@/lib/notifications';
 import { queryClient, queryKeys, useOrders } from '@/lib/queries';
@@ -190,18 +192,35 @@ export default function ProfileScreen() {
               onPress={dropping ? undefined : () => void simulatePriceDrop()}
             />
           )}
+          <View style={[styles.divider, { backgroundColor: colors.border }]} />
+          <PushDiagnostics onMessage={show} />
         </Group>
 
         <Group title="About">
-          <ListRow label="Version" value={Constants.expoConfig?.version ?? '1.0.0'} />
-          <ListRow label="Built with" value="Expo + React Native" />
-          <ListRow label="Product data" value="DummyJSON demo data" />
-          <ListRow label="Data source" value={isMockApi ? 'Local mock' : 'Cloud API'} />
+          <ListRow label="App version" value={Constants.expoConfig?.version ?? '1.0.0'} />
+          <ListRow label="Version" caption={updateLabel()} />
+          <ListRow label="Data source" caption={isMockApi ? 'Mock (local demo data)' : `Cloud API · ${apiHost}`} />
+          <ListRow label="Built with" caption="Expo SDK 58 + React Native 0.88" />
+          <ListRow label="AI" caption="Gemini on Google Cloud, answers grounded in product data" />
+          <ListRow label="Product data" caption="DummyJSON demo data" />
         </Group>
       </ScrollView>
       {snackbar}
     </Screen>
   );
+}
+
+/** Which JS bundle is running: proves an OTA update landed during the demo. */
+function updateLabel() {
+  if (__DEV__) return 'Development (Metro)';
+  if (!Updates.isEnabled) return 'Embedded build (updates off)';
+  if (Updates.isEmbeddedLaunch || !Updates.updateId) {
+    return `Embedded build${Updates.channel ? ` · channel ${Updates.channel}` : ''}`;
+  }
+  const when = Updates.createdAt
+    ? ` · ${Updates.createdAt.toLocaleString('en-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}`
+    : '';
+  return `Update ${Updates.updateId.slice(0, 8)}${when}${Updates.channel ? ` · ${Updates.channel}` : ''}`;
 }
 
 function Group({ title, children }: { title: string; children: ReactNode }) {
@@ -226,4 +245,5 @@ const styles = StyleSheet.create({
   groupTitle: { fontWeight: '700', letterSpacing: 0.8, paddingHorizontal: Spacing.xs },
   groupBody: { borderRadius: Radius.lg, borderWidth: StyleSheet.hairlineWidth, overflow: 'hidden' },
   padded: { padding: Spacing.md },
+  divider: { height: StyleSheet.hairlineWidth, marginHorizontal: Spacing.lg },
 });
