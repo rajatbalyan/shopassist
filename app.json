@@ -35,11 +35,24 @@
           "imageWidth": 76
         }
       ],
-      "expo-image"
+      "expo-image",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/android-icon-monochrome.png",
+          "color": "#5B4CF0"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "557f0140-62a9-4cbc-b933-e59ea158a80f"
+      }
+    },
+    "owner": "rajatbalyan"
   }
 }

@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "smartphones",
+    "name": "Smartphones",
+    "count": 12
+  },
+  {
+    "slug": "laptops",
+    "name": "Laptops",
+    "count": 5
+  },
+  {
+    "slug": "mens-shirts",
+    "name": "Men's Shirts",
+    "count": 5
+  },
+  {
+    "slug": "womens-bags",
+    "name": "Women's Bags",
+    "count": 5
+  },
+  {
+    "slug": "kitchen-accessories",
+    "name": "Kitchen",
+    "count": 13
+  },
+  {
+    "slug": "beauty",
+    "name": "Beauty",
+    "count": 5
+  },
+  {
+    "slug": "skin-care",
+    "name": "Skin Care",
+    "count": 3
+  }
+]
